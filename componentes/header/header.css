@@ -3,4 +3,68 @@
     height: 8rem;
     border: 1px solid black;
     border-radius: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-image: url("https://c.wallhere.com/photos/f1/53/computer_PC_build_PC_cases_PC_gaming_glass_design_high_tech_nft_robot-2236066.jpg!d");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logotipo{
+    width: 20rem;
+    height: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logotipo div{
+    width: 10rem;
+    height: 5rem;
+}
+
+.logotipo div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logotipo h1{
+    font-family: "Lilita One", sans-serif;
+    font-size: 14px;
+    color: rgb(255, 205, 187);
+}
+
+.nombre{
+    width: 40rem;
+    height: 6rem;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombre h1,h2{
+    font-family: "Lilita One", sans-serif;
+    font-size: 26px;
+    color: rgb(255, 205, 187);
+
+}
+
+.about {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1rem;
+}
+
+.about img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
