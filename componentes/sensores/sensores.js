@@ -52,31 +52,31 @@ function sensores() {
                 <h5>1</h5>
                 <h5>sensor turbidez</h5>
                 <div class="estado">En progreso</div>
-                <button class="activar_desactivar">activar</button>
+                <button class="activar_desactivar">activado</button>
             </div>
             <div class="sensor-funcion">
                 <h5>2</h5>
                 <h5>sensor ph</h5>
                 <div class="estado">En progreso</div>
-                <button class="activar_desactivar">activar</button>
+                <button class="activar_desactivar">activado</button>
             </div>
             <div class="sensor-funcion">
                 <h5>3</h5>
                 <h5>sensor temperatura</h5>
                 <div class="estado">En progreso</div>
-                <button class="activar_desactivar">activar</button>
+                <button class="activar_desactivar">activado</button>
             </div>
             <div class="sensor-funcion">
                 <h5>4</h5>
                 <h5>bombas</h5>
                 <div class="estado">Sin empezar</div>
-                <button class="activar_desactivar">activar</button>
+                <button class="activar_desactivar">activado</button>
             </div>
             <div class="sensor-funcion">
                 <h5>5</h5>
                 <h5>motor oxigeno</h5>
                 <div class="estado">En progreso</div>
-                <button class="activar_desactivar">activar</button>
+                <button class="activar_desactivar">activado</button>
             </div>
         </div>
     `;

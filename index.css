@@ -1,8 +1,7 @@
-.dom{
+.dom {
     width: 100%;
-    height: 100vh;
-
+    min-height: 100vh; /* Usamos min-height en lugar de height */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto; /* Ajustamos las filas para que sean flexibles */
 }

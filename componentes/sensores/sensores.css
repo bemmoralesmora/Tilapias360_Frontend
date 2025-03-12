@@ -1,8 +1,7 @@
 .sensores {
     width: 100%;
-    height: 60rem;
-    border: 1px solid black;
-    border-radius: 1rem;
+    height: auto; /* Cambiamos a altura automática */
+    padding: 2rem 0; /* Añadimos padding */
     background-color: rgb(236, 167, 231);
     display: flex;
     flex-direction: column;
@@ -12,16 +11,18 @@
 
 .datos {
     width: 100%;
-    height: 25rem;
+    height: auto; /* Altura automática */
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem; /* Reducimos el padding en móviles */
     display: flex;
-    gap: 2rem;
+    flex-direction: column; /* Cambiamos a columna en móviles */
+    gap: 1rem; /* Espacio entre elementos */
+    align-items: center;
 }
 
 .sensor {
-    width: 20rem;
-    height: 20rem;
+    width: 90%; /* Ocupa casi todo el ancho en móviles */
+    height: auto; /* Altura automática */
     border: 1px solid black;
     border-radius: 1rem;
     padding: 1rem;
@@ -56,9 +57,9 @@
 
 .datos-b {
     width: 100%;
-    height: 30rem;
+    height: auto; /* Altura automática */
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1rem; /* Reducimos el padding en móviles */
     display: flex;
     flex-direction: column;
 }
@@ -69,40 +70,37 @@
     font-size: 25px;
 }
 
-.contenedor-b{
-    width: auto;
-    height: 22rem;
+.contenedor-b {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Altura automática */
     border: 1px solid #000000;
     border-radius: 1rem;
     padding: 1rem;
     gap: 1rem;
-
     display: flex;
     flex-direction: column;
 }
 
-.contenedor-b .sensor-funcion{
-    width: auto;
-    height: 3rem;
+.contenedor-b .sensor-funcion {
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Altura automática */
     border: 1px solid #000000;
     border-radius: 1rem;
-
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr; /* Una columna en móviles */
     padding: 1rem;
-    gap: 2rem;
+    gap: 1rem; /* Reducimos el espacio entre elementos */
 }
 
-.sensor-funcion h5{
+.sensor-funcion h5 {
     font-family: "Lilita One", sans-serif;
     color: rgb(77, 71, 70);
     font-size: 15px;
 }
 
-.sensor-funcion .estado{
-    width: 10rem;
+.sensor-funcion .estado {
+    width: 100%; /* Ocupa todo el ancho */
     height: 2rem;
-
     border: 1px solid #000000;
     border-radius: 5px;
     display: flex;
@@ -111,17 +109,41 @@
     background-color: rgb(64, 147, 196);
 }
 
-.sensor-funcion .activar_desactivar{
-    width: 8rem;
-    height: 2rem;
+.sensor-funcion .activar_desactivar {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 3rem;
     border-radius: 5px;
     background-color: rgb(105, 245, 105);
 }
 
-.datos-e {
-    width: 100%;
-    height: 20rem;
-    border: 1px solid black;
-    border-radius: 1rem;
-    background-color: brown;
+/* Media Queries para tablets */
+@media (min-width: 768px) {
+    .datos {
+        flex-direction: row; /* Volvemos a fila en tablets */
+        flex-wrap: wrap; /* Permitimos que los elementos se envuelvan */
+        justify-content: center;
+    }
+
+    .sensor {
+        width: 45%; /* Dos columnas en tablets */
+    }
+
+    .contenedor-b .sensor-funcion {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+    }
+}
+
+/* Media Queries para escritorios */
+@media (min-width: 1024px) {
+    .datos {
+        flex-wrap: nowrap; /* Una sola fila en escritorios */
+    }
+
+    .sensor {
+        width: 20rem; /* Tamaño original */
+    }
+
+    .contenedor-b .sensor-funcion {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en escritorio */
+    }
 }
