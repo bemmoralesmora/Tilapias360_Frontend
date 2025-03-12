@@ -1,6 +1,127 @@
-.sensores{
+.sensores {
     width: 100%;
-    height: 50rem;
+    height: 60rem;
     border: 1px solid black;
     border-radius: 1rem;
+    background-color: rgb(236, 167, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.datos {
+    width: 100%;
+    height: 25rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.sensor {
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sensor div {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 1rem;
+}
+
+.sensor div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sensor h1 {
+    font-family: "Lilita One", sans-serif;
+    color: rgb(77, 71, 70);
+    font-size: 25px;
+}
+
+.sensor p {
+    font-family: "Lilita One", sans-serif;
+    color: rgb(77, 71, 70);
+    font-size: 15px;
+}
+
+.datos-b {
+    width: 100%;
+    height: 30rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.datos-b h1 {
+    font-family: "Lilita One", sans-serif;
+    color: rgb(77, 71, 70);
+    font-size: 25px;
+}
+
+.contenedor-b{
+    width: auto;
+    height: 22rem;
+    border: 1px solid #000000;
+    border-radius: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-b .sensor-funcion{
+    width: auto;
+    height: 3rem;
+    border: 1px solid #000000;
+    border-radius: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.sensor-funcion h5{
+    font-family: "Lilita One", sans-serif;
+    color: rgb(77, 71, 70);
+    font-size: 15px;
+}
+
+.sensor-funcion .estado{
+    width: 10rem;
+    height: 2rem;
+
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(64, 147, 196);
+}
+
+.sensor-funcion .activar_desactivar{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: rgb(105, 245, 105);
+}
+
+.datos-e {
+    width: 100%;
+    height: 20rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: brown;
 }
