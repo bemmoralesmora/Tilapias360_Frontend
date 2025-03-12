@@ -70,7 +70,7 @@ function sensores() {
                 <h5>4</h5>
                 <h5>bombas</h5>
                 <div class="estado">Sin empezar</div>
-                <button class="activar_desactivar">desactivar</button>
+                <button class="activar_desactivar">activar</button>
             </div>
             <div class="sensor-funcion">
                 <h5>5</h5>
