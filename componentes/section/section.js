@@ -4,7 +4,11 @@ function section() {
 
     let bloque1 = document.createElement('div');
     bloque1.className = "bloque1";
-    bloque1.innerHTML = `<h1>TILAPIAS360</h1>`;
+
+    let titulo = document.createElement('h1');
+    titulo.textContent = "TILAPIAS360";
+    bloque1.appendChild(titulo);
+
     section.appendChild(bloque1);
 
     let contenedor_b1 = document.createElement('div');
@@ -13,10 +17,10 @@ function section() {
 
     let form_donation = document.createElement('button');
     form_donation.className = "form-d";
-    form_donation.textContent = "Donation to the project"
+    form_donation.textContent = "Donation to the project";
     contenedor_b1.appendChild(form_donation);
 
-    let form_recomend = document.createElement('div');
+    let form_recomend = document.createElement('button');
     form_recomend.className = "form-r";
     form_recomend.textContent = "What do you think of our project?";
     contenedor_b1.appendChild(form_recomend);
@@ -25,14 +29,12 @@ function section() {
     image3D.className = "image3D";
     bloque1.appendChild(image3D);
 
-    
-
     // Crear las flechas de navegación
     let directions = ['up', 'down', 'left', 'right'];
     directions.forEach(dir => {
         let arrow = document.createElement('button');
         arrow.className = `arrow arrow-${dir}`;
-        arrow.innerText = dir.toUpperCase();
+        arrow.textContent = dir.toUpperCase();
 
         switch (dir) {
             case 'up': arrow.style.top = '-30px'; break;

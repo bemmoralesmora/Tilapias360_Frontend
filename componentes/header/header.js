@@ -8,39 +8,50 @@ function header() {
     let header = document.createElement('header');
     header.className = "header";
 
+    // Crear el logotipo
     let logotipo = document.createElement("div");
     logotipo.className = "logotipo";
-    logotipo.innerHTML = `
-    <div>
-    <img src="https://static.wixstatic.com/media/d1b317_4fe70cb66f9447c3991ad4cb8d7294d3~mv2.png/v1/fit/w_2500,h_1330,al_c/d1b317_4fe70cb66f9447c3991ad4cb8d7294d3~mv2.png" alt="">
-    </div>
-    <h1>Colegio Santa Catalina Laubouré</h1>
-    `;
+
+    let divImg = document.createElement('div');
+    let img = document.createElement('img');
+    img.src = "https://static.wixstatic.com/media/d1b317_4fe70cb66f9447c3991ad4cb8d7294d3~mv2.png/v1/fit/w_2500,h_1330,al_c/d1b317_4fe70cb66f9447c3991ad4cb8d7294d3~mv2.png";
+    img.alt = "";
+    divImg.appendChild(img);
+
+    let titulo = document.createElement('h1');
+    titulo.textContent = "Colegio Santa Catalina Laubouré";
+
+    logotipo.appendChild(divImg);
+    logotipo.appendChild(titulo);
     header.appendChild(logotipo);
 
+    // Crear el menú
     let menu = document.createElement('div');
     menu.className = "menu";
 
     // Crear botón HOME
     let homeButton = document.createElement('button');
-    homeButton.textContent = "HOME"; // Texto en mayúscula
+    homeButton.textContent = "HOME";
     homeButton.className = "home";
 
-    // Crear botones en lugar de enlaces
+    // Crear botón SENSORS
     let sensorsButton = document.createElement('button');
-    sensorsButton.textContent = "SENSORS"; // Texto en mayúscula
+    sensorsButton.textContent = "SENSORS";
     sensorsButton.className = "sensores-a";
 
+    // Crear botón ACTIVATORS
     let activatorsButton = document.createElement('button');
-    activatorsButton.textContent = "ACTIVATORS"; // Texto en mayúscula
+    activatorsButton.textContent = "ACTIVATORS";
     activatorsButton.className = "activadores";
 
+    // Crear botón BUY
     let buyButton = document.createElement('button');
-    buyButton.textContent = "BUY"; // Texto en mayúscula
+    buyButton.textContent = "BUY";
     buyButton.className = "compra";
 
+    // Crear botón ABOUT
     let aboutButton = document.createElement('button');
-    aboutButton.textContent = "ABOUT"; // Texto en mayúscula
+    aboutButton.textContent = "ABOUT";
     aboutButton.className = "about";
 
     // Agregar eventos de clic a los botones
@@ -65,7 +76,7 @@ function header() {
     });
 
     // Agregar los botones al menú
-    menu.appendChild(homeButton); // Agregar el botón HOME primero
+    menu.appendChild(homeButton);
     menu.appendChild(sensorsButton);
     menu.appendChild(activatorsButton);
     menu.appendChild(buyButton);
