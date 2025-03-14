@@ -8,3 +8,11 @@ html{
     font-family: monospace;
     font-size: 10px;
 }
+
+:root {
+    --azul-profundo: #1B4965;
+    --turquesa-claro: #5FA8D3;
+    --verde-agua: #B8DEDA;
+    --arena-suave: #F4EAE6;
+    --gris-oscuro: #333333;
+}
