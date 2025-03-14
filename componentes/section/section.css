@@ -1,0 +1,100 @@
+.section {
+    width: auto;
+    height: auto;
+}
+
+.bloque1 {
+    width: auto;
+    height: 130vh;
+    background-image: url("https://c.wallhere.com/photos/bc/7f/1920x1200_px_fish_fishes_nature_ocean_sea_sealife_underwater-1648927.jpg!d");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.bloque1 h1 {
+    font-size: 80px;
+    font-family: "Lilita One", sans-serif;
+    color: rgb(255, 205, 187);
+    gap: 1rem;
+}
+
+.contenedor-b1 {
+    width: 60rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-d, .form-r {
+    width: 30rem;
+    height: 5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-d {
+    background-color: rgb(48, 141, 141);
+}
+
+.form-r {
+    background-color: rgb(194, 191, 191);
+}
+
+.image3D {
+    width: 100rem;
+    height: 50rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    background-color: rgb(48, 141, 141);
+
+}
+
+.arrow {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow-up {
+    font-weight: 600;
+    top: -30px;
+}
+
+.arrow-down {
+    font-weight: 600;
+    bottom: -30px;
+}
+
+.arrow-left {
+    font-weight: 600;
+    left: -50px;
+}
+
+.arrow-right {
+    font-weight: 600;
+    right: -50px;
+}
