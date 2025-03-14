@@ -69,8 +69,22 @@ function sensores() {
     );
     datos_resumen.appendChild(sensor_ph);
 
-    // Llamar a la función para activar/desactivar
-    activa_desactivar();
+    let sensor_oxigeno = crearSensor(
+        "https://cdn-icons-png.freepik.com/512/11298/11298713.png",
+        "500",
+        "Sensor de oxigeno",
+        "10min"
+    );
+    datos_resumen.appendChild(sensor_oxigeno);
+
+    let sensor_humedad = crearSensor(
+        "https://cdn-icons-png.freepik.com/512/11298/11298713.png",
+        "500",
+        "Sensor de humedad",
+        "10min"
+    );
+    datos_resumen.appendChild(sensor_humedad);
+
 
     return sensores;
 }

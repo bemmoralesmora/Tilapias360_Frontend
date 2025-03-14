@@ -10,7 +10,6 @@ function cargarDom (){
     dom.appendChild(section())
     dom.appendChild(footer())
 
-    activa_desactivar()
 }   
 
 cargarDom();

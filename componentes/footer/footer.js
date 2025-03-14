@@ -68,7 +68,7 @@ function footer() {
     caja1.className = "caja";
 
     let enlace1 = document.createElement('a');
-    enlace1.href = "";
+    enlace1.href = "https://github.com/bemmoralesmora/Tilapias360_Frontend";
 
     let img4 = document.createElement('img');
     img4.src = "https://cdn-icons-png.flaticon.com/512/25/25231.png";
@@ -155,7 +155,7 @@ function footer() {
     informacion.appendChild(informacion_titulo);
 
     let enlace5 = document.createElement('a');
-    enlace5.href = "";
+    enlace5.href = "https://www.google.com/maps/place/Colegio+Santa+Catalina+Laboure/data=!4m2!3m1!1s0x0:0x7af091a9cf2a1171?sa=X&ved=1t:2428&ictx=111";
     enlace5.textContent = "Ubicacion";
     informacion.appendChild(enlace5);
 
@@ -165,13 +165,13 @@ function footer() {
     informacion.appendChild(enlace6);
 
     let enlace7 = document.createElement('a');
-    enlace7.href = "";
+    enlace7.href = "https://www.scl.edu.gt";
     enlace7.textContent = "Sitio web";
     informacion.appendChild(enlace7);
 
     let enlace8 = document.createElement('a');
     enlace8.href = "";
-    enlace8.textContent = "Contactanos";
+    enlace8.textContent = "Presentación";
     informacion.appendChild(enlace8);
 
     contenedor_footer.appendChild(informacion);

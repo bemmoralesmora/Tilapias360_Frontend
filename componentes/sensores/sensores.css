@@ -1,7 +1,7 @@
 .sensores {
     width: 100%;
-    height: auto; /* Cambiamos a altura automática */
-    padding: 2rem 0; /* Añadimos padding */
+    height: auto;
+    padding: 2rem 0;
     background-color: rgb(236, 167, 231);
     display: flex;
     flex-direction: column;
@@ -11,18 +11,17 @@
 
 .datos {
     width: 100%;
-    height: auto; /* Altura automática */
+    height: auto;
     border-radius: 1rem;
-    padding: 1rem; /* Reducimos el padding en móviles */
-    display: flex;
-    flex-direction: column; /* Cambiamos a columna en móviles */
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     gap: 1rem; /* Espacio entre elementos */
-    align-items: center;
 }
 
 .sensor {
-    width: 90%; /* Ocupa casi todo el ancho en móviles */
-    height: auto; /* Altura automática */
+    width: 100%;
+    height: auto;
     border: 1px solid black;
     border-radius: 1rem;
     padding: 1rem;
@@ -57,9 +56,9 @@
 
 .datos-b {
     width: 100%;
-    height: auto; /* Altura automática */
+    height: auto;
     border-radius: 1rem;
-    padding: 1rem; /* Reducimos el padding en móviles */
+    padding: 1rem;
     display: flex;
     flex-direction: column;
 }
@@ -70,3 +69,15 @@
     font-size: 25px;
 }
 
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .datos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .datos {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+}
