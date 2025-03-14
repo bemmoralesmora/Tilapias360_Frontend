@@ -42,45 +42,7 @@ function sensores() {
     `;
     datos_resumen.appendChild(sensor_ph);
 
-    // Contenedor de la barra de progreso
-    let datos_barra = document.createElement('div');
-    datos_barra.className = "datos-b";
-    datos_barra.innerHTML = `
-        <h1>Niveles sensores</h1>
-        <div class="contenedor-b">
-            <div class="sensor-funcion">
-                <h5>1</h5>
-                <h5>sensor turbidez</h5>
-                <div class="estado">En progreso</div>
-                <button class="activar_desactivar">activado</button>
-            </div>
-            <div class="sensor-funcion">
-                <h5>2</h5>
-                <h5>sensor ph</h5>
-                <div class="estado">En progreso</div>
-                <button class="activar_desactivar">activado</button>
-            </div>
-            <div class="sensor-funcion">
-                <h5>3</h5>
-                <h5>sensor temperatura</h5>
-                <div class="estado">En progreso</div>
-                <button class="activar_desactivar">activado</button>
-            </div>
-            <div class="sensor-funcion">
-                <h5>4</h5>
-                <h5>bombas</h5>
-                <div class="estado">Sin empezar</div>
-                <button class="activar_desactivar">activado</button>
-            </div>
-            <div class="sensor-funcion">
-                <h5>5</h5>
-                <h5>motor oxigeno</h5>
-                <div class="estado">En progreso</div>
-                <button class="activar_desactivar">activado</button>
-            </div>
-        </div>
-    `;
-    sensores.appendChild(datos_barra);
+
 
     activa_desactivar();
 
