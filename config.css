@@ -8,3 +8,14 @@ html{
     font-family: monospace;
     font-size: 10px;
 }
+
+:root {
+    --azul-profundo: #1B4965;
+    --turquesa-claro: #5FA8D3;
+    --verde-agua: #B8DEDA;
+    --arena-suave: #F4EAE6;
+    --gris-oscuro: #333333;
+    --rosa: #1B4965;
+    --blanco: rgba(255, 255, 255, 1);
+    --gris-claro: rgba(244, 244, 244, 1);
+}
