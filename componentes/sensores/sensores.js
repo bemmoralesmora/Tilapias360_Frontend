@@ -1,4 +1,3 @@
-import { activa_desactivar } from "./funcionesSensores.js";
 import { obtenerDatosThingSpeak } from "../../backend/backend.js";
 
 function sensores() {

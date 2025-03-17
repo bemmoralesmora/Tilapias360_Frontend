@@ -1,0 +1,67 @@
+.activators{
+    width: 100%;
+    height: auto;
+    background-color: rgb(236, 167, 231);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.bomba1{
+    width: 30rem;
+    height: 30rem;
+    border: 1px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 1rem;
+
+}
+
+.bomba1 .img-act{
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+
+}
+
+.bomba1 h1{
+    font-family: "Lilita One", sans-serif;
+    color: rgb(77, 71, 70);
+    font-size: 25px;
+    border-radius: 1rem;
+
+}
+
+.bomba1 .progreso{
+    width: 15rem;
+    height: 3rem;
+    background-color: rgb(133, 206, 206);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Lilita One", sans-serif;
+    color: rgb(77, 71, 70);
+    font-size: 18px;
+    border-radius: 1rem;
+}
+
+.bomba1 .act-desc{
+    width: 15rem;
+    height: 3rem;
+    background-color: rgb(157, 194, 101);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Lilita One", sans-serif;
+    color: rgb(77, 71, 70);
+    font-size: 18px;
+    border-radius: 1rem;
+}
