@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     opacity: 0.9;
-    background-color: var(--verde-agua);
+    background-color: var(--turquesa-claro);
     position: relative;
     box-sizing: border-box;
 }

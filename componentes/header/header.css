@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    height: 10rem; /* Manteniendo el tamaño aumentado */
+    height: 6rem; /* Manteniendo el tamaño aumentado */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,7 +9,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-    background-color: var(--verde-agua);
+    background-color: var(--turquesa-claro);
     padding: 0 2rem; /* Manteniendo el padding lateral */
 }
 
@@ -24,7 +24,7 @@
 }
 
 .logotipo div {
-    width: 12rem; /* Manteniendo el tamaño ajustado */
+    width: 20rem; /* Manteniendo el tamaño ajustado */
     height: 6rem;
 }
 
