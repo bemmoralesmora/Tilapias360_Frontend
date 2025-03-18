@@ -1,5 +1,3 @@
-import { obtenerDatosThingSpeak } from "../../backend/backend.js";
-
 function sensores() {
     let sensores = document.createElement("section");
     sensores.className = "sensores";
@@ -18,7 +16,6 @@ function sensores() {
         let divImg = document.createElement('div');
         let img = document.createElement('img');
         img.src = imagenSrc; 
-
         img.alt = "";
         divImg.appendChild(img);
 
@@ -59,45 +56,33 @@ function sensores() {
     datos_resumen.appendChild(sensor_oxigeno);
     datos_resumen.appendChild(sensor_humedad);
 
-    // Variables para manejar errores en la actualización de datos
-    let intentosFallidos = 0;
-    const maxIntentosFallidos = 3;
-
-    // Función para obtener y actualizar los datos de ThingSpeak
-    async function actualizarDatos() {
-        try {
-            const datos = await obtenerDatosThingSpeak();
-
-            if (datos) {
-                document.getElementById("valorTurbidez").innerText = `${datos.turbidez} NTU`;
-                document.getElementById("valorTemperatura").innerText = `${datos.temperatura}°C`;
-                document.getElementById("valorPH").innerText = `pH ${datos.ph}`;
-                document.getElementById("valorOxigeno").innerText = `${datos.oxigeno} mg/L`;
-                document.getElementById("valorHumedad").innerText = `${datos.humedad}%`;
-                intentosFallidos = 0;
-            } else {
-                manejarError();
-            }
-        } catch (error) {
-            console.error("Error al obtener datos de ThingSpeak:", error);
-            manejarError();
-        }
+    // Función para hacer fetch y actualizar el DOM con los valores de los sensores
+    function actualizarSensor(url, idElemento, nombreSensor) {
+        fetch(url)
+            .then(response => response.json())  // Suponiendo que la respuesta es un JSON
+            .then(data => {
+                const valorSensor = document.getElementById(idElemento);
+                console.log(valorSensor);
+                
+                if (valorSensor) {
+                    valorSensor.textContent = `${nombreSensor}: ${data[nombreSensor.toLowerCase()]} ${nombreSensor === "Temperatura" ? "°C" : ""}`;
+                }
+            })
+            .catch(error => {
+                console.error(`Error al obtener el valor de ${nombreSensor}:`, error);
+                const valorSensor = document.getElementById(idElemento);
+                if (valorSensor) {
+                    valorSensor.textContent = `Error al cargar ${nombreSensor}`;
+                }
+            });
     }
 
-    
-    function manejarError() {
-        intentosFallidos++;
-        if (intentosFallidos >= maxIntentosFallidos) {
-            document.getElementById("valorTurbidez").innerText = "⚠️ Error: No hay datos";
-            document.getElementById("valorTemperatura").innerText = "⚠️ Error: No hay datos";
-            document.getElementById("valorPH").innerText = "⚠️ Error: No hay datos";
-            document.getElementById("valorOxigeno").innerText = "⚠️ Error: No hay datos";
-            document.getElementById("valorHumedad").innerText = "⚠️ Error: No hay datos";
-        }
-    }
-
-    // Actualizar los datos cada 5 segundos
-    setInterval(actualizarDatos, 5000);
+    // Actualizar valores de cada sensor
+    actualizarSensor('http://45.56.113.215:3000/temperatura', 'valorTemperatura', 'Temperatura');
+    actualizarSensor('http://45.56.113.215:3000/ph', 'valorPH', 'pH');
+    actualizarSensor('http://45.56.113.215:3000/humedad', 'valorHumedad', 'Humedad');
+    actualizarSensor('http://45.56.113.215:3000/oxigeno', 'valorOxigeno', 'Oxigeno');
+    actualizarSensor('http://45.56.113.215:3000/turbidez', 'valorTurbidez', 'Turbidez');
 
     return sensores;
 }

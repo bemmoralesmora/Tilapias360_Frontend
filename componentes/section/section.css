@@ -6,14 +6,11 @@
 .bloque1 {
     width: 100%;
     height: 100vh; /* Altura completa de la pantalla */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centra el contenido verticalmente */
-    padding: 5rem;
+    padding: 2rem;
     background-color: var(--gris-claro);
 }
 
@@ -75,7 +72,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-top: 2rem; /* Espacio arriba de la imagen */
+    margin-top: 4rem; /* Espacio arriba de la imagen */
     background-color: var(--azul-profundo);
 }
 
