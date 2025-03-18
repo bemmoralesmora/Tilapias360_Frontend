@@ -1,17 +1,12 @@
 .header {
     width: 100%;
-    height: 8rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    background-image: url("");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
     opacity: 0.9;
 
-    background-color: rgb(112, 168, 149);
+    background-color: var(--turquesa-claro);
 }
 
 .logotipo {
@@ -24,8 +19,7 @@
 }
 
 .logotipo div {
-    width: 10rem;
-    height: 5rem;
+    width: 30rem;
 }
 
 .logotipo div img {
@@ -33,13 +27,6 @@
     height: 100%;
     object-fit: cover;
 }
-
-.logotipo h1 {
-    font-family: "Lilita One", sans-serif;
-    font-size: 14px;
-    color: rgb(255, 205, 187);
-}
-
 
 
 .menu{
@@ -63,7 +50,8 @@
 
     font-family: "Lilita One", sans-serif;
     font-size: 18px;
-    color: rgb(255, 205, 187);
+    color: var(--blanco);
+    cursor: pointer;
 }
 
 .menu button:hover{

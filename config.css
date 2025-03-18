@@ -11,7 +11,7 @@ html{
 
 :root {
     --azul-profundo: #1B4965;
-    --turquesa-claro: #5FA8D3;
+    --turquesa-claro: rgb(112, 168, 149);
     --verde-agua: #B8DEDA;
     --arena-suave: #F4EAE6;
     --gris-oscuro: #333333;
