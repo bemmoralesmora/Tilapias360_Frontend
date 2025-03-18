@@ -1,6 +1,6 @@
 .activators {
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: var(--turquesa-claro);
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
@@ -30,7 +30,7 @@
 
 .bomba1 h1 {
     font-family: "Lilita One", sans-serif;
-    color: rgb(77, 71, 70);
+    color: var(--gris-oscuro);
     font-size: 25px;
     border-radius: 1rem;
 }
@@ -38,7 +38,7 @@
 .bomba1 .progreso {
     width: 100%; /* Cambia a 100% para que ocupe todo el ancho del contenedor */
     height: 3rem;
-    background-color: rgb(133, 206, 206);
+    background-color:var(--verde-agua);
     display: flex;
     align-items: center;
     justify-content: center;

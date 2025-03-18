@@ -1,6 +1,6 @@
 .sensores {
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 2rem 0;
     background-color: var(--turquesa-claro);
     display: flex;
@@ -11,11 +11,12 @@
 
 .datos {
     width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
     height: auto;
     border-radius: 1rem;
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
     gap: 1rem; /* Espacio entre elementos */
 }
 
@@ -27,57 +28,82 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centra el contenido */
     gap: 0.5rem;
+    text-align: center; /* Centra el texto */
 }
 
 .sensor div {
     width: 8rem;
     height: 8rem;
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sensor div img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 1rem;
 }
 
 .sensor h1 {
     font-family: "Lilita One", sans-serif;
-    color: rgb(77, 71, 70);
+    color:var(--gris-oscuro);
     font-size: 25px;
+    margin: 0; /* Elimina el margen por defecto */
 }
 
 .sensor p {
     font-family: "Lilita One", sans-serif;
-    color: rgb(77, 71, 70);
+    color: var(--arena-suave);
     font-size: 15px;
+    margin: 0; /* Elimina el margen por defecto */
 }
 
 .datos-b {
     width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
     height: auto;
     border-radius: 1rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Centra el contenido */
+    text-align: center; /* Centra el texto */
 }
 
 .datos-b h1 {
     font-family: "Lilita One", sans-serif;
-    color: rgb(77, 71, 70);
+    color: var(--gris-oscuro);
     font-size: 25px;
+    margin: 0; /* Elimina el margen por defecto */
 }
 
 /* Estilos responsivos */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .datos {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .datos {
         grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+
+    .sensor div {
+        width: 6rem; /* Reduce el tamaño de la imagen en móviles */
+        height: 6rem;
+    }
+
+    .sensor h1 {
+        font-size: 20px; /* Reduce el tamaño de la fuente en móviles */
+    }
+
+    .sensor p {
+        font-size: 14px; /* Reduce el tamaño de la fuente en móviles */
     }
 }

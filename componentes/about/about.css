@@ -12,7 +12,7 @@ body {
 /* Sección About */
 .about {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,8 +63,9 @@ body {
 }
 
 .introduction a:hover {
-    background-color: var(--verde-agua);
+    background-color: var(--azul-profundo);
     transform: scale(1.05);
+    color: var(--arena-suave);
 }
 
 .introduction a:active {
@@ -182,7 +183,7 @@ body {
 }
 
 .cuadro-rosa:hover {
-    background-color: var(--azul-profundo);
+    background-color: var(--turquesa-claro);
     transform: scale(1.05);
 }
 
@@ -443,8 +444,8 @@ body {
 }
 
 .rosa-bq4:hover {
-    background-color: var(--azul-profundo);
-    color: var(--blanco);
+    background-color: var(--verde-agua);
+    color: var( --gris-oscuro);
     transform: scale(1.05);
 }
 

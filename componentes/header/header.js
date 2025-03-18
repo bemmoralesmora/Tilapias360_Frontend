@@ -18,7 +18,12 @@ function header() {
     img.alt = "";
     divImg.appendChild(img);
 
+    // Agregar título
+    let titulo = document.createElement('h1');
+    titulo.textContent = "Colegio Sta. Catalina Laubouré";
+
     logotipo.appendChild(divImg);
+    logotipo.appendChild(titulo); // Agregar el título al logotipo
     header.appendChild(logotipo);
 
     // Crear el menú
