@@ -1,7 +1,7 @@
 .comprar {
     width: 100%;
     height: 100%;
-    background-color: var(--turquesa-claro);
+    background-color: var(--verde-agua);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -113,7 +113,7 @@ function footer() {
     caja3.className = "caja";
 
     let enlace3 = document.createElement('a');
-    enlace3.href = "";
+    enlace3.href = "https://www.instagram.com/school_scl/";
 
     let img6 = document.createElement('img');
     img6.src = "https://1000marcas.net/wp-content/uploads/2019/11/Instagram-Logo.png";

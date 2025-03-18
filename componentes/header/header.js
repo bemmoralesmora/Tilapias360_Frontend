@@ -14,16 +14,11 @@ function header() {
 
     let divImg = document.createElement('div');
     let img = document.createElement('img');
-    img.src = "https://github.com/ROCKEMMA/img/blob/main/logoscl.png?raw=true";
+    img.src = "https://static.wixstatic.com/media/d1b317_9cd309d010cf405ca0a70e15aed80dff~mv2.png/v1/crop/x_293,y_282,w_2144,h_825/fill/w_520,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LogoSCL-13.png";
     img.alt = "";
     divImg.appendChild(img);
 
-    // Agregar título
-    let titulo = document.createElement('h1');
-    titulo.textContent = "Colegio Sta. Catalina Laubouré";
-
     logotipo.appendChild(divImg);
-    logotipo.appendChild(titulo); // Agregar el título al logotipo
     header.appendChild(logotipo);
 
     // Crear el menú
