@@ -78,11 +78,11 @@ function sensores() {
     }
 
     // Actualizar valores de cada sensor
-    actualizarSensor('http://45.56.113.215:3000/temperatura', 'valorTemperatura', 'Temperatura');
-    actualizarSensor('http://45.56.113.215:3000/ph', 'valorPH', 'pH');
-    actualizarSensor('http://45.56.113.215:3000/humedad', 'valorComida', 'Nivel de comida');
-    actualizarSensor('http://45.56.113.215:3000/oxigeno', 'valorOxigeno', 'Oxigeno');
-    actualizarSensor('http://45.56.113.215:3000/turbidez', 'valorTurbidez', 'Turbidez');
+    actualizarSensor('https://tilapias360.duckdns.org:3000/temperatura', 'valorTemperatura', 'Temperatura');
+    actualizarSensor('https://tilapias360.duckdns.org:3000/ph', 'valorPH', 'pH');
+    actualizarSensor('https://tilapias360.duckdns.org:3000/humedad', 'valorComida', 'Nivel de comida');
+    actualizarSensor('https://tilapias360.duckdns.org:3000/oxigeno', 'valorOxigeno', 'Oxigeno');
+    actualizarSensor('https://tilapias360.duckdns.org:3000/turbidez', 'valorTurbidez', 'Turbidez');
 
     return sensores;
 }

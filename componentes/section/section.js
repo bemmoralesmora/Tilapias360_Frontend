@@ -57,11 +57,11 @@ function section() {
     function actualizarIndicadores() {
         // URLs de las APIs
         const urls = {
-            'Temperatura': 'http://45.56.113.215:3000/temperatura',
-            'PH': 'http://45.56.113.215:3000/ph',
-            'Humedad': 'http://45.56.113.215:3000/humedad',
-            'Oxigeno': 'http://45.56.113.215:3000/oxigeno',
-            'Turbidez': 'http://45.56.113.215:3000/turbidez'
+            'Temperatura': 'https://tilapias360.duckdns.org:3000/temperatura',
+            'PH': 'https://tilapias360.duckdns.org:3000/ph',
+            'Humedad': 'https://tilapias360.duckdns.org:3000/humedad',
+            'Oxigeno': 'https://tilapias360.duckdns.org:3000/oxigeno',
+            'Turbidez': 'https://tilapias360.duckdns.org:3000/turbidez'
         };
 
         // Para cada indicador, hacer un fetch y actualizar el texto
