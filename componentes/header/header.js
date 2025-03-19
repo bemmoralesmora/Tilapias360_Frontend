@@ -86,4 +86,4 @@ function loadSection(section) {
     }
 }
 
-export { header };
+export { header, loadSection};

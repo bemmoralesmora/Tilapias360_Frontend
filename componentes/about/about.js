@@ -1,3 +1,7 @@
+import { comprar } from "../comprar/comprar.js";
+import { loadSection } from "../header/header.js";
+import { section } from "../section/section.js";
+
 function about() {
     let about = document.createElement('section');
     about.className = "about";
@@ -40,7 +44,6 @@ function about() {
     return about;
 }
 
-// Función para crear el bloque 3
 function createBloque3() {
     let bloque3 = document.createElement('section');
     bloque3.className = "bloque3";
@@ -49,7 +52,7 @@ function createBloque3() {
     imgText.className = "img-text";
 
     let img = document.createElement('img');
-    img.src = "https://upload.wikimedia.org/wikipedia/commons/e/e8/Oreochromis_mossambicus.jpg"; // Imagen sin ruta
+    img.src = "https://upload.wikimedia.org/wikipedia/commons/e/e8/Oreochromis_mossambicus.jpg"; // Imagen de tilapia
     img.alt = "";
 
     let lineas = document.createElement('div');
@@ -79,9 +82,15 @@ function createBloque3() {
     let p = document.createElement('p');
     p.textContent = "Este sistema permite mantener las condiciones óptimas para el crecimiento de tilapias, asegurando un ambiente saludable y reduciendo la necesidad de intervención manual.";
 
-    let cuadroRosa = document.createElement('div');
+    // Convertir el div en un botón
+    let cuadroRosa = document.createElement('button');
     cuadroRosa.className = "cuadro-rosa";
     cuadroRosa.textContent = "Aprende más";
+
+    // Agregar evento de clic para redirigir a la sección de inicio (home)
+    cuadroRosa.addEventListener('click', () => {
+        loadSection(section()); // Cargar la sección de inicio
+    });
 
     textoBq3.appendChild(p);
     textoBq3.appendChild(cuadroRosa);
@@ -96,10 +105,10 @@ function createBloque3() {
     numeros.className = "numeros";
 
     let numerosData = [
-        { src: "", text: "Sensores utilizados" }, // Imagen sin ruta
-        { src: "", text: "Motores controlados" }, // Imagen sin ruta
-        { src: "", text: "Datos monitoreados" }, // Imagen sin ruta
-        { src: "", text: "Tilapias cuidadas" } // Imagen sin ruta
+        { src: "https://empresasalacarta.cl/wp-content/uploads/2023/08/Sensores.webp", text: "Sensores utilizados" },
+        { src: "https://novatronicec.com/wp-content/uploads/2024/06/MB102-Fuente-para-protoboard-5V-y-3.3V-MB102.png", text: "Motores controlados" },
+        { src: "https://www.mouser.com.gt/images/marketingid/2022/img/127818871.png?v=032924.0127", text: "Datos monitoreados" },
+        { src: "https://shopcdnpro.grainajz.com/category/81972/250/b34b05e6a7bf34562dd8c69e0322a44a/image.png", text: "Tilapias cuidadas" }
     ];
 
     numerosData.forEach(data => {
@@ -109,7 +118,7 @@ function createBloque3() {
         let numerosH1 = document.createElement('div');
         numerosH1.className = "numeros-h1";
         let imgNum = document.createElement('img');
-        imgNum.src = data.src; // Imagen sin ruta
+        imgNum.src = data.src;
         imgNum.alt = "";
         numerosH1.appendChild(imgNum);
 
@@ -128,7 +137,8 @@ function createBloque3() {
     return bloque3;
 }
 
-// Función para crear el bloque 4
+export { createBloque3 }; 
+
 function createBloque4() {
     let bloque4 = document.createElement('section');
     bloque4.className = "bloque4";
@@ -174,10 +184,9 @@ function createBloque4() {
     imagenBq4.className = "imagen-bq4";
 
     let imagesData = [
-        { src: "", title: "Sensor de pH", lessons: 16, weeks: 16, price: "$350", rating: "3.9" }, // Imagen sin ruta
-        { src: "", title: "Sensor de Temperatura", lessons: 17, weeks: 16, price: "$350", rating: "3.7" }, // Imagen sin ruta
-        { src: "", title: "Sensor de Oxígeno", lessons: 15, weeks: 16, price: "$350", rating: "3.8" }, // Imagen sin ruta
-        { src: "", title: "Sensor de Turbidez", lessons: 19, weeks: 16, price: "$350", rating: "5.0" } // Imagen sin ruta
+        { src: "https://www.mouser.com.gt/images/marketingid/2018/img/153364623.png?v=070223.0303", title: "Sensor de pH", price: "$350", rating: "3.9" },
+        { src: "https://i0.wp.com/j-rpm.com/wp-content/uploads/2018/05/DHT11-300x289.png?resize=660%2C636", title: "Sensor de Temperatura", price: "$350", rating: "3.7" },
+        { src: "https://www.walchem.com/wp-content/uploads/pyxisdissolvedoxygen-1-300x300.png", title: "Sensor de Oxígeno", price: "$350", rating: "3.8" },
     ];
 
     imagesData.forEach(data => {
@@ -188,7 +197,7 @@ function createBloque4() {
         imgBq4.className = "img-bq4";
 
         let img = document.createElement('img');
-        img.src = data.src; // Imagen sin ruta
+        img.src = data.src;
         img.alt = "";
 
         let imgTextBq4 = document.createElement('div');
@@ -197,20 +206,6 @@ function createBloque4() {
         let figma = document.createElement('div');
         figma.className = "figma";
         figma.textContent = data.title;
-
-        let lesson = document.createElement('div');
-        lesson.className = "lesson";
-
-        let docs = document.createElement('div');
-        docs.className = "docs";
-        docs.textContent = `${data.lessons} Ciclos`;
-
-        let week = document.createElement('div');
-        week.className = "week";
-        week.textContent = `${data.weeks} semanas`;
-
-        lesson.appendChild(docs);
-        lesson.appendChild(week);
 
         let estrella = document.createElement('div');
         estrella.className = "estrella";
@@ -227,7 +222,6 @@ function createBloque4() {
         estrella.appendChild(star);
 
         imgTextBq4.appendChild(figma);
-        imgTextBq4.appendChild(lesson);
         imgTextBq4.appendChild(estrella);
 
         imgBq4.appendChild(img);
@@ -236,9 +230,15 @@ function createBloque4() {
         imagenBq4.appendChild(miniImgBq4);
     });
 
-    let rosaBq4 = document.createElement('div');
+    // Convertir el div en un botón
+    let rosaBq4 = document.createElement('button');
     rosaBq4.className = "rosa-bq4";
     rosaBq4.textContent = "Ver todos los componentes";
+
+    // Agregar evento de clic para redirigir a la sección de compra
+    rosaBq4.addEventListener('click', () => {
+        loadSection(comprar()); // Cargar la sección de compra
+    });
 
     bloque4.appendChild(tituloBq4);
     bloque4.appendChild(textoBq4);
@@ -266,7 +266,7 @@ function createBloque5() {
 
     let studentBq5 = document.createElement('div');
     studentBq5.className = "student-bq5";
-    studentBq5.textContent = "Opiniones de Usuarios";
+    studentBq5.textContent = "Experiencia estudiantes";
 
     tituloBq5.appendChild(testimonials);
     tituloBq5.appendChild(studentBq5);
@@ -275,9 +275,27 @@ function createBloque5() {
     cuadroStudents.className = "cuadro-students";
 
     let estudiantesData = [
-        { src: "", name: "Juan Pérez", role: "Acuicultor", rating: "4.9", text: "Este sistema ha revolucionado la forma en que cuido mis tilapias. ¡Altamente recomendado!" }, // Imagen sin ruta
-        { src: "", name: "María Gómez", role: "Bióloga Marina", rating: "4.8", text: "La precisión de los sensores y la automatización son impresionantes." }, // Imagen sin ruta
-        { src: "", name: "Carlos Ruiz", role: "Ingeniero Acuícola", rating: "5.0", text: "Un proyecto innovador que facilita el manejo de peceras a gran escala." } // Imagen sin ruta
+        { 
+            src: "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png", 
+            name: "Gabriel López", 
+            role: "Estudiante de Computación", 
+            rating: "4.7", 
+            text: "Me encargué de trabajar en el material designado al prototipo, asegurándome de que cada componente fuera intuitivo y fácil de usar, lo que permitió un diseño efectivo para el proyecto." 
+        }, 
+        { 
+            src: "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png", 
+            name: "José María", 
+            role: "Estudiante de Computación", 
+            rating: "4.9", 
+            text: "Mi responsabilidad fue desarrollar el circuito y el backend del proyecto. Gracias a la implementación de una arquitectura robusta, logramos una plataforma eficiente y funcional." 
+        }, 
+        { 
+            src: "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png", 
+            name: "Brian Morales", 
+            role: "Estudiante de Computación", 
+            rating: "5.0", 
+            text: "Me encargué de la programación del frontend. Trabajé en la creación de una interfaz amigable y atractiva, asegurando que la experiencia de usuario fuera lo más fluida posible." 
+        }
     ];
 
     estudiantesData.forEach(data => {
@@ -355,50 +373,48 @@ function createBloque6() {
     cuadroImgBq6.className = "cuadro-img-bq6";
 
     let blogData = [
-        { src: "", user: "Ana López", date: "Feb 23, 2024", title: "Cómo optimizar el crecimiento de tilapias con tecnología" }, // Imagen sin ruta
-        { src: "", user: "Pedro Martínez", date: "Feb 23, 2024", title: "Automatización en acuicultura: Beneficios y desafíos" }, // Imagen sin ruta
-        { src: "", user: "Luisa Fernández", date: "Feb 23, 2024", title: "Sensores inteligentes para el cuidado de peces" } // Imagen sin ruta
+        { 
+            src: "https://pharmaq-cdn-e9g8bdeng6hhcsee.z01.azurefd.net/media/2zdbo42d/niletilapia.jpg?width=1200&height=800&v=1d6f61f34f1f6e0", 
+            user: "Portal Amelica", 
+            date: "Feb 23, 2024", 
+            title: "Cómo optimizar el crecimiento de tilapias con tecnología", 
+            link: "https://portal.amelica.org/ameli/journal/129/1292407004/html/?utm_source=chatgpt.com"
+        },
+        { 
+            src: "https://media.istockphoto.com/id/1341577178/es/vector/ilustración-de-granja-flotante.jpg?s=612x612&w=0&k=20&c=evCUWMNgHkdgXFZxwK0i8ttKD0RQ2qrCCludp9TBXr0=", 
+            user: "ResearchGate", 
+            date: "Feb 23, 2024", 
+            title: "Automatización en acuicultura: Beneficios y desafíos", 
+            link: "https://www.researchgate.net/publication/384303292_Sistema_de_Monitoreo_Automatizado_de_Variables_Ambientales_en_un_Cultivo_Acuaponico_de_Tilapia_y_Lechuga?utm_source=chatgpt.com"
+        },
+        { 
+            src: "https://fnb.tech/wp-content/uploads/2025/02/Fish-Monitoring-System.jpg", 
+            user: "Digepesca SAG Honduras", 
+            date: "Feb 23, 2024", 
+            title: "Sensores inteligentes para el cuidado de peces", 
+            link: "https://www.digepesca.sag.gob.hn/wp-content/uploads/2022/12/Manual-de-Principales-Enfermedades-en-el-Cultivo-de-Tilapia.pdf?utm_source=chatgpt.com"
+        },
+        { 
+            src: "https://www.gob.mx/cms/uploads/article/main_image/8394/Drones_acuacultura.jpg", 
+            user: "Universidad de Colima", 
+            date: "Feb 23, 2024", 
+            title: "Monitoreo avanzado con drones en piscicultura", 
+            link: "https://www.ucol.mx/noticias/nota_13759.htm?utm_source=chatgpt.com"
+        },
+        { 
+            src: "https://www.globalseafood.org/wp-content/uploads/2018/04/DAVIS-Pic-1-960x566.jpg", 
+            user: "Scribd", 
+            date: "Feb 23, 2024", 
+            title: "Sistemas automatizados para la alimentación de tilapias", 
+            link: "https://www.scribd.com/document/475891481/propuesta-final-docx?utm_source=chatgpt.com"
+        }
     ];
 
-    blogData.forEach(data => {
-        let imgBlogBq6 = document.createElement('div');
-        imgBlogBq6.className = "img-blog-bq6";
+    // Mostrar solo los primeros 4 artículos inicialmente
+    let initialArticles = blogData.slice(0, 4);
 
-        let img1Bq6 = document.createElement('div');
-        img1Bq6.className = "img1-bq6";
-
-        let img = document.createElement('img');
-        img.src = data.src; // Imagen sin ruta
-        img.alt = "";
-
-        img1Bq6.appendChild(img);
-
-        let usuarioBq6 = document.createElement('div');
-        usuarioBq6.className = "usuario-bq6";
-
-        let user = document.createElement('div');
-        user.className = "user";
-        user.textContent = data.user;
-
-        let fecha = document.createElement('div');
-        fecha.className = "fecha";
-        fecha.textContent = data.date;
-
-        usuarioBq6.appendChild(user);
-        usuarioBq6.appendChild(fecha);
-
-        let lorem = document.createElement('div');
-        lorem.className = "lorem";
-        lorem.textContent = data.title;
-
-        let readMore = document.createElement('div');
-        readMore.className = "read-more";
-        readMore.textContent = "Leer más";
-
-        imgBlogBq6.appendChild(img1Bq6);
-        imgBlogBq6.appendChild(usuarioBq6);
-        imgBlogBq6.appendChild(lorem);
-        imgBlogBq6.appendChild(readMore);
+    initialArticles.forEach(data => {
+        let imgBlogBq6 = createArticle(data);
         cuadroImgBq6.appendChild(imgBlogBq6);
     });
 
@@ -406,11 +422,67 @@ function createBloque6() {
     cuadroRosaBq6.className = "cuadro-rosa-bq6";
     cuadroRosaBq6.textContent = "Ver todos";
 
+    // Evento para mostrar todos los artículos al hacer clic en "Ver todos"
+    cuadroRosaBq6.addEventListener('click', () => {
+        cuadroImgBq6.innerHTML = ""; // Limpiar los artículos actuales
+        blogData.forEach(data => {
+            let imgBlogBq6 = createArticle(data);
+            cuadroImgBq6.appendChild(imgBlogBq6);
+        });
+        cuadroRosaBq6.style.display = "none"; // Ocultar el botón "Ver todos"
+    });
+
     bloque6.appendChild(tituloBq6);
     bloque6.appendChild(cuadroImgBq6);
     bloque6.appendChild(cuadroRosaBq6);
 
     return bloque6;
+}
+
+// Función para crear un artículo
+function createArticle(data) {
+    let imgBlogBq6 = document.createElement('div');
+    imgBlogBq6.className = "img-blog-bq6";
+
+    let img1Bq6 = document.createElement('div');
+    img1Bq6.className = "img1-bq6";
+
+    let img = document.createElement('img');
+    img.src = data.src;
+    img.alt = "";
+
+    img1Bq6.appendChild(img);
+
+    let usuarioBq6 = document.createElement('div');
+    usuarioBq6.className = "usuario-bq6";
+
+    let user = document.createElement('div');
+    user.className = "user";
+    user.textContent = data.user;
+
+    let fecha = document.createElement('div');
+    fecha.className = "fecha";
+    fecha.textContent = data.date;
+
+    usuarioBq6.appendChild(user);
+    usuarioBq6.appendChild(fecha);
+
+    let lorem = document.createElement('div');
+    lorem.className = "lorem";
+    lorem.textContent = data.title;
+
+    let readMore = document.createElement('a');
+    readMore.className = "read-more";
+    readMore.textContent = "Leer más";
+    readMore.href = data.link;
+    readMore.target = "_blank";
+
+    imgBlogBq6.appendChild(img1Bq6);
+    imgBlogBq6.appendChild(usuarioBq6);
+    imgBlogBq6.appendChild(lorem);
+    imgBlogBq6.appendChild(readMore);
+
+    return imgBlogBq6;
 }
 
 // Exporta solo la función about

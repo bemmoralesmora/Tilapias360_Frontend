@@ -1,30 +1,28 @@
-/*FORMULARIO DONACION */
-.donaciones{
+/* Estilos base (para desktop) */
+.donaciones {
     width: 100%;
     height: 100vh;
     background-color: var(--turquesa-claro);
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     padding: 1rem;
 }
 
-.logo-donation{
+.logo-donation {
     grid-row: 1/2;
     grid-column: 1/2;
-
-    width: 25rem; /* Manteniendo el tamaño aumentado */
+    width: 25rem;
     height: 6rem;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem; /* Espacio entre el logo y el texto */
+    gap: 1rem;
 }
 
 .logo-donation div {
-    width: 20rem; /* Manteniendo el tamaño ajustado */
+    width: 20rem;
     height: 6rem;
 }
 
@@ -36,59 +34,58 @@
 
 .logo-donation h1 {
     font-family: "Lilita One", sans-serif;
-    font-size: 18px; /* Manteniendo el tamaño aumentado */
+    font-size: 18px;
     color: var(--azul-profundo);
 }
 
-.contenedor-donation{
+.contenedor-donation {
     grid-row: 2/3;
     grid-column: 1/2;
     padding: 2rem;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 5rem;
 }
 
-.contenedor-donation h2{
+.contenedor-donation h2 {
     font-family: "Lilita One", sans-serif;
-    font-size: 80px; /* Manteniendo el tamaño aumentado */
+    font-size: 80px;
     color: var(--azul-profundo);
 }
 
-.contenedor-donation h3{
+.contenedor-donation h3 {
     font-family: "Lilita One", sans-serif;
-    font-size: 25px; /* Manteniendo el tamaño aumentado */
+    font-size: 25px;
     color: var(--azul-profundo);
 }
 
-.contenedor-donation p{
+.contenedor-donation p {
     width: 20rem;
     font-family: "Lilita One", sans-serif;
-    font-size: 18px; /* Manteniendo el tamaño aumentado */
+    font-size: 18px;
     color: var(--gris-claro);
 }
 
-.contenedor-donation .redes_sociales-f{
+.contenedor-donation .redes_sociales-f {
     width: 50rem;
     height: 5rem;
     display: flex;
     gap: 1rem;
 }
 
-.redes_sociales-f a{
+.redes_sociales-f a {
     width: 6rem;
     height: 5rem;
 }
 
-.redes_sociales-f a img{
+.redes_sociales-f a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.contact-container{
+.contact-container {
     grid-row: 2/3;
     grid-column: 2/3;
     display: flex;
@@ -96,11 +93,10 @@
     justify-content: center;
 }
 
-#contactForm{
+#contactForm {
     width: 50rem;
     height: 50rem;
     background-color: var(--gris-oscuro);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,25 +106,23 @@
     padding: 1rem;
 }
 
-#contactForm input{
+#contactForm input {
     all: unset;
     width: 30rem;
     height: 5rem;
-
-    border: none; /* Quita todos los bordes */
-    border-bottom: 2px solid #ffffff; /* Agrega solo el borde inferior */
-    outline: none; /* Evita el contorno azul al hacer focus */
-    padding: 5px; 
-
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    padding: 5px;
     color: white;
     font-size: 20px;
 }
 
-#contactForm textarea{
+#contactForm textarea {
     width: 32rem;
     height: 10rem;
     font-family: "Lilita One", sans-serif;
-    font-size: 18px; /* Manteniendo el tamaño aumentado */
+    font-size: 18px;
     color: var(--azul-profundo);
     padding: 0.5rem;
 }
@@ -166,10 +160,121 @@
     transform: translateY(0);
 }
 
+/* Media Queries para Tablet */
+@media (max-width: 1023px) {
+    .donaciones {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        min-height: 100vh; /* Mantenemos min-height */
 
-/*FORMULARIO RESEÑAS */
+    }
 
-/* FORMULARIO RECOMENDACIONES */
+    .logo-donation {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+
+    .contenedor-donation {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .contenedor-donation h2 {
+        font-size: 60px;
+    }
+
+    .contenedor-donation h3 {
+        font-size: 20px;
+    }
+
+    .contenedor-donation p {
+        width: 100%;
+    }
+
+    .contenedor-donation .redes_sociales-f {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-container {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    #contactForm {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+        width: 100%;
+    }
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 767px) {
+    .donaciones {
+        min-height: 100vh; /* Aseguramos que ocupe al menos el 100% de la pantalla */
+        height: auto; /* Permitimos que el contenido crezca si es necesario */
+    }
+    .logo-donation {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-donation h1 {
+        font-size: 16px;
+    }
+
+    .contenedor-donation h2 {
+        font-size: 40px;
+    }
+
+    .contenedor-donation h3 {
+        font-size: 18px;
+    }
+
+    .contenedor-donation p {
+        font-size: 16px;
+    }
+
+    .redes_sociales-f a {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #contactForm {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #contactForm input {
+        height: 4rem;
+        font-size: 16px;
+    }
+
+    #contactForm textarea {
+        height: 8rem;
+        font-size: 16px;
+    }
+
+    #contactForm button {
+        width: 100%;
+        height: 4rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Estilos base (para desktop) */
 .recomendaciones {
     width: 100%;
     height: 100vh;
@@ -263,4 +368,81 @@
 
 #contactFormRecomend button:active {
     transform: translateY(0);
+}
+
+/* Media Queries para Tablet */
+@media (max-width: 1023px) {
+    .recomendaciones {
+        height: auto;
+        padding: 1rem;
+        min-height: 100vh; /* Mantenemos min-height */
+
+    }
+
+    .logo-recomend {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 1rem;
+    }
+
+    .contact-container-recomend {
+        padding: 1rem;
+    }
+
+    #contactFormRecomend {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    #contactFormRecomend input,
+    #contactFormRecomend textarea {
+        width: 100%;
+    }
+
+    #contactFormRecomend button {
+        width: 100%;
+    }
+}
+
+/* Media Queries para Mobile */
+@media (max-width: 767px) {
+    .recomendaciones {
+        min-height: 100vh; /* Aseguramos que ocupe al menos el 100% de la pantalla */
+        height: auto; /* Permitimos que el contenido crezca si es necesario */
+    }
+    .logo-recomend {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo-recomend div {
+        width: 15rem;
+        height: 5rem;
+    }
+
+    .logo-recomend h1 {
+        font-size: 16px;
+    }
+
+    #contactFormRecomend {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #contactFormRecomend input {
+        height: 4rem;
+        font-size: 16px;
+    }
+
+    #contactFormRecomend textarea {
+        height: 8rem;
+        font-size: 16px;
+    }
+
+    #contactFormRecomend button {
+        height: 4rem;
+        font-size: 1.2rem;
+    }
 }

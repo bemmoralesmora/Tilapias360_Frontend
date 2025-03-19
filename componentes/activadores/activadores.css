@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     padding: 2rem;
     gap: 2rem;
 }
@@ -13,18 +13,18 @@
 .bomba1 {
     width: 30rem;
     height: auto; /* Cambia a auto para que la altura se ajuste al contenido */
-    border: 1px solid black;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
     border-radius: 1rem;
+    background-color: var(--gris-claro);
 }
 
 .bomba1 .img-act {
-    width: 100%; /* Cambia a 100% para que la imagen se ajuste al contenedor */
-    height: 15rem; /* Cambia a auto para mantener la proporción de la imagen */
-    border: 1px solid black;
+    width: 40%; /* Cambia a 100% para que la imagen se ajuste al contenedor */
+    height: auto; /* Cambia a auto para mantener la proporción de la imagen */
     border-radius: 1rem;
 }
 
@@ -35,10 +35,16 @@
     border-radius: 1rem;
 }
 
+.bomba1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .bomba1 .progreso {
     width: 100%; /* Cambia a 100% para que ocupe todo el ancho del contenedor */
     height: 3rem;
-    background-color:var(--turquesa-claro);
+    background-color:var(--verde-agua);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +55,8 @@
 }
 
 .bomba1 .act-desc {
-    width: 100%; /* Cambia a 100% para que ocupe todo el ancho del contenedor */
+    all: unset;
+    width: 100%;
     height: 3rem;
     background-color: rgb(157, 194, 101);
     display: flex;
@@ -59,7 +66,15 @@
     color: rgb(77, 71, 70);
     font-size: 18px;
     border-radius: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.bomba1 .act-desc:hover {
+    background-color: rgb(127, 164, 71);
+    transform: scale(1.05);
+    color: var(--gris-claro);
+}
+
 
 /* Media queries para hacer el diseño responsive */
 @media (max-width: 768px) {
@@ -77,6 +92,12 @@
         font-size: 20px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
     }
 
+    .bomba1 .img-act {
+        width: 40%; /* Cambia a 100% para que la imagen se ajuste al contenedor */
+        height: auto; /* Cambia a auto para mantener la proporción de la imagen */
+        border-radius: 1rem;
+    }
+
     .bomba1 .progreso, .bomba1 .act-desc {
         font-size: 16px; /* Reduce el tamaño de la fuente en pantallas pequeñas */
     }
@@ -89,5 +110,11 @@
 
     .bomba1 .progreso, .bomba1 .act-desc {
         font-size: 14px; /* Reduce aún más el tamaño de la fuente en pantallas muy pequeñas */
+    }
+
+    .bomba1 .img-act {
+        width: 40%; /* Cambia a 100% para que la imagen se ajuste al contenedor */
+        height: auto; /* Cambia a auto para mantener la proporción de la imagen */
+        border-radius: 1rem;
     }
 }

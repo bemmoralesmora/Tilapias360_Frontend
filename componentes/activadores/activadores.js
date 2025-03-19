@@ -12,7 +12,7 @@ function activadores() {
     imgAct1.className = "img-act";
 
     let img1 = document.createElement('img');
-    img1.src = ""; // Imagen sin ruta
+    img1.src = "https://cdn-icons-png.flaticon.com/512/3463/3463883.png"; // Imagen sin ruta
     img1.alt = "";
     imgAct1.appendChild(img1);
 
@@ -45,7 +45,7 @@ function activadores() {
     imgAct2.className = "img-act";
 
     let img2 = document.createElement('img');
-    img2.src = ""; // Imagen sin ruta
+    img2.src = "https://cdn-icons-png.flaticon.com/512/3463/3463883.png"; // Imagen sin ruta
     img2.alt = "";
     imgAct2.appendChild(img2);
 
@@ -78,7 +78,7 @@ function activadores() {
     imgAct3.className = "img-act";
 
     let img3 = document.createElement('img');
-    img3.src = ""; // Imagen sin ruta
+    img3.src = "https://cdn-icons-png.flaticon.com/512/3463/3463883.png"; // Imagen sin ruta
     img3.alt = "";
     imgAct3.appendChild(img3);
 
