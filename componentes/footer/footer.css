@@ -90,7 +90,7 @@
     font-size: 20px;
     font-family: "Lilita One", sans-serif;
     color: var(--azul-profundo);
-    align-self: flex-start;
+    align-self: center;
 }
 
 .repos .caja, .producto .caja {
@@ -98,13 +98,13 @@
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     gap: 0.5rem;
 }
 
 .repos .caja a, .producto .caja a {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .repos .caja a img, .producto .caja a img {
