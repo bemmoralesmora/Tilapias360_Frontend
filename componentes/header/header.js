@@ -8,18 +8,11 @@ function header() {
     let header = document.createElement('header');
     header.className = "header";
 
-    // Crear el logotipo
-    let logotipo = document.createElement("div");
-    logotipo.className = "logotipo";
-
-    let divImg = document.createElement('div');
     let img = document.createElement('img');
     img.src = "https://static.wixstatic.com/media/d1b317_9cd309d010cf405ca0a70e15aed80dff~mv2.png/v1/crop/x_293,y_282,w_2144,h_825/fill/w_520,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LogoSCL-13.png";
     img.alt = "";
-    divImg.appendChild(img);
 
-    logotipo.appendChild(divImg);
-    header.appendChild(logotipo);
+    header.appendChild(img);
 
     // Crear el menú
     let menu = document.createElement('div');
