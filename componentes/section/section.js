@@ -1,6 +1,3 @@
-// Importar las funciones desde formularios.js
-import { form_donation, form_recomend } from "../formularios/formularios.js";
-
 function section() {
     let section = document.createElement('section');
     section.className = "section";
@@ -14,47 +11,21 @@ function section() {
 
     section.appendChild(bloque1);
 
-    let contenedor_b1 = document.createElement('div');
-    contenedor_b1.className = "contenedor-b1";
-    bloque1.appendChild(contenedor_b1);
-
-    let form_donation_btn = document.createElement('button');
-    form_donation_btn.className = "form-d";
-    form_donation_btn.textContent = "Donation to the project";
-    contenedor_b1.appendChild(form_donation_btn);
-
-    let form_recomend_btn = document.createElement('button');
-    form_recomend_btn.className = "form-r";
-    form_recomend_btn.textContent = "What do you think of our project?";
-    contenedor_b1.appendChild(form_recomend_btn);
-
-    // Event listeners para los botones
-    form_donation_btn.addEventListener('click', () => {
-        let donationSection = form_donation(); // Obtener el diseño del formulario de donación
-        document.body.innerHTML = ''; // Limpiar el cuerpo
-        document.body.appendChild(donationSection); // Mostrar el nuevo diseño
-    });
-
-    form_recomend_btn.addEventListener('click', () => {
-        let recomendSection = form_recomend(); // Obtener el diseño del formulario de recomendación
-        document.body.innerHTML = ''; // Limpiar el cuerpo
-        document.body.appendChild(recomendSection); // Mostrar el nuevo diseño
-    });
-
     let image3D = document.createElement('div');
     image3D.className = "image3D";
     bloque1.appendChild(image3D);
 
-    // Crear las flechas de navegación
-    let directions = ['up', 'down', 'left', 'right'];
+    // Establecer la imagen inicial (alfrente) como fondo
+    image3D.style.backgroundImage = `url('${faces[0]}')`;
+
+    // Crear las flechas de navegación izquierda y derecha
+    let directions = ['left', 'right'];
     directions.forEach(dir => {
         let arrow = document.createElement('button');
         arrow.className = `arrow arrow-${dir}`;
         arrow.textContent = dir.toUpperCase();
 
         switch (dir) {
-            case 'up': arrow.style.top = '-30px'; break;
-            case 'down': arrow.style.bottom = '-30px'; break;
             case 'left': arrow.style.left = '-50px'; break;
             case 'right': arrow.style.right = '-50px'; break;
         }
@@ -63,25 +34,82 @@ function section() {
         image3D.appendChild(arrow);
     });
 
+    // Crear los recuadros pequeños para indicadores
+    const indicators = ['Temperatura', 'Oxigeno', 'Turbidez', 'PH', 'Humedad'];
+    let indicatorContainer = document.createElement('div');
+    indicatorContainer.className = 'indicator-container';
+
+    let indicatorBoxes = {}; // Objeto para guardar los elementos de cada indicador
+
+    indicators.forEach((indicator, index) => {
+        let indicatorBox = document.createElement('div');
+        indicatorBox.className = 'indicator-box';
+        indicatorBox.textContent = `${indicator}: #`;
+        indicatorContainer.appendChild(indicatorBox);
+
+        // Guardamos la referencia a cada indicador
+        indicatorBoxes[indicator] = indicatorBox;
+    });
+
+    image3D.appendChild(indicatorContainer);
+
+    // Función para actualizar los valores de los indicadores
+    function actualizarIndicadores() {
+        // URLs de las APIs
+        const urls = {
+            'Temperatura': 'http://45.56.113.215:3000/temperatura',
+            'PH': 'http://45.56.113.215:3000/ph',
+            'Humedad': 'http://45.56.113.215:3000/humedad',
+            'Oxigeno': 'http://45.56.113.215:3000/oxigeno',
+            'Turbidez': 'http://45.56.113.215:3000/turbidez'
+        };
+
+        // Para cada indicador, hacer un fetch y actualizar el texto
+        for (let indicator of indicators) {
+            console.log(urls[indicator])
+            fetch(urls[indicator])
+                .then(response => response.json())
+                .then(data => {
+                    console.log(`${indicator}:`, data); // Ver la respuesta de la API
+                    
+                    let value;
+
+                    // Ajuste para el oxígeno
+                    if (indicator === 'Oxigeno') {
+                        value = data.oxigeno || "No disponible";  // Ajustar acceso al valor correcto
+                    } else {
+                        value = data[indicator.toLowerCase()] || "No disponible";
+                    }
+
+                    // Actualizar el texto del indicador
+                    indicatorBoxes[indicator].textContent = `${indicator}: ${value}`;
+                })
+                .catch(error => {
+                    console.error(`Error al obtener el valor de ${indicator}:`, error);
+                    indicatorBoxes[indicator].textContent = `${indicator}: Error al cargar`;
+                });
+        }
+    }
+
+    // Llamamos a la función para actualizar los indicadores
+    actualizarIndicadores();
+
     return section;
 }
 
 let currentFace = 0;
 const faces = [
-    'images/front.png',
-    'images/back.png',
-    'images/left.png',
-    'images/right.png',
-    'images/top.png',
-    'images/bottom.png'
+    'componentes/section/images/izquierda.png',
+    'componentes/section/images/alfrente.png',
+    'componentes/section/images/atras.png',
+    'componentes/section/images/derecha.png',
+    'componentes/section/images/derecha.png'
 ];
 
 function navigateCube(direction) {
     switch (direction) {
-        case 'up': currentFace = (currentFace + 1) % faces.length; break;
-        case 'down': currentFace = (currentFace - 1 + faces.length) % faces.length; break;
-        case 'left': currentFace = (currentFace + 2) % faces.length; break;
-        case 'right': currentFace = (currentFace - 2 + faces.length) % faces.length; break;
+        case 'left': currentFace = (currentFace + 1) % faces.length; break;  // Navegar hacia la izquierda
+        case 'right': currentFace = (currentFace - 1 + faces.length) % faces.length; break;  // Navegar hacia la derecha
     }
     document.querySelector('.image3D').style.backgroundImage = `url('${faces[currentFace]}')`;
 }

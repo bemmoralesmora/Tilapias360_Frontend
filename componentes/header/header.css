@@ -1,65 +1,28 @@
 .header {
     width: 100%;
-    height: 6rem; /* Manteniendo el tamaño aumentado */
+    height: 6rem;
+    padding: 0px 3rem;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    opacity: 0.9;
-    background-image: url("");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
     background-color: var(--turquesa-claro);
-    padding: 0 2rem; /* Manteniendo el padding lateral */
-}
-
-.logotipo {
-    width: 25rem; /* Manteniendo el tamaño aumentado */
-    height: 6rem;
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem; /* Espacio entre el logo y el texto */
-}
-
-.logotipo div {
-    width: 20rem; /* Manteniendo el tamaño ajustado */
-    height: 6rem;
-}
-
-.logotipo div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.logotipo h1 {
-    font-family: "Lilita One", sans-serif;
-    font-size: 18px; /* Manteniendo el tamaño aumentado */
-    color: var(--azul-profundo);
 }
 
 .menu {
     width: 50rem;
-    height: 5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around ;
     align-items: center;
 }
 
 .menu button {
     all: unset;
-    width: 10rem;
-    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Lilita One", sans-serif;
     font-size: 18px;
     color: var(--azul-profundo);
     cursor: pointer;
-    transition: color 0.3s ease; /* Manteniendo la transición suave */
+    transition: color 0.3s ease;
 }
 
 .menu button:hover {
