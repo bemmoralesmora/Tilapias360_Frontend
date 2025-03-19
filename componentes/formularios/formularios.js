@@ -1,6 +1,8 @@
+
 function form_donation() {
     let form_donation = document.createElement('section');
     form_donation.className = "donaciones";
+    form_donation.id = "form_donation"; // Identificador único
 
     // Crear el logotipo y el título
     let logoDiv = document.createElement('div');
@@ -149,6 +151,7 @@ export { form_donation };
 function form_recomend() {
     let form_recomend = document.createElement('section');
     form_recomend.className = "recomendaciones";
+    form_recomend.id = "form_recomend"; // Identificador único
 
     // Crear el logotipo y el título
     let logoDiv = document.createElement('div');

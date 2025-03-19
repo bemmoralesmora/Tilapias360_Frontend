@@ -47,14 +47,14 @@ function sensores() {
     let sensor_temperatura = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorTemperatura", "Sensor de temperatura", "proximoRecuentoTemperatura");
     let sensor_ph = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorPH", "Sensor de pH", "proximoRecuentoPH");
     let sensor_oxigeno = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorOxigeno", "Sensor de oxígeno", "proximoRecuentoOxigeno");
-    let sensor_humedad = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorHumedad", "Sensor de humedad", "proximoRecuentoHumedad");
+    let sensor_comida = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorComida", "Sensor de nivel de comida", "proximoRecuentoComida");
 
     // Agregar sensores al contenedor
     datos_resumen.appendChild(sensor_turbidez);
     datos_resumen.appendChild(sensor_temperatura);
     datos_resumen.appendChild(sensor_ph);
     datos_resumen.appendChild(sensor_oxigeno);
-    datos_resumen.appendChild(sensor_humedad);
+    datos_resumen.appendChild(sensor_comida);
 
     // Función para hacer fetch y actualizar el DOM con los valores de los sensores
     function actualizarSensor(url, idElemento, nombreSensor) {
@@ -80,7 +80,7 @@ function sensores() {
     // Actualizar valores de cada sensor
     actualizarSensor('http://45.56.113.215:3000/temperatura', 'valorTemperatura', 'Temperatura');
     actualizarSensor('http://45.56.113.215:3000/ph', 'valorPH', 'pH');
-    actualizarSensor('http://45.56.113.215:3000/humedad', 'valorHumedad', 'Humedad');
+    actualizarSensor('http://45.56.113.215:3000/humedad', 'valorComida', 'Nivel de comida');
     actualizarSensor('http://45.56.113.215:3000/oxigeno', 'valorOxigeno', 'Oxigeno');
     actualizarSensor('http://45.56.113.215:3000/turbidez', 'valorTurbidez', 'Turbidez');
 

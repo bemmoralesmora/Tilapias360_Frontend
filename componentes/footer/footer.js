@@ -1,3 +1,5 @@
+import { form_donation, form_recomend } from "../formularios/formularios.js";
+
 function footer() {
     let footer = document.createElement('footer');
     footer.className = "footer";
@@ -131,10 +133,10 @@ function footer() {
     caja4.className = "caja";
 
     let enlace4 = document.createElement('a');
-    enlace4.href = "";
+    enlace4.href = "https://www.facebook.com/colegioSCL";
 
     let img7 = document.createElement('img');
-    img7.src = "https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png";
+    img7.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png";
     img7.alt = "";
     enlace4.appendChild(img7);
 
@@ -144,6 +146,25 @@ function footer() {
     caja4.appendChild(texto4);
 
     producto.appendChild(caja4);
+
+    // Añadir TikTok
+    let caja5 = document.createElement('div');
+    caja5.className = "caja";
+
+    let enlace5 = document.createElement('a');
+    enlace5.href = "https://www.tiktok.com/@scl_school"; 
+
+    let img8 = document.createElement('img');
+    img8.src = "https://cdn-icons-png.flaticon.com/512/3046/3046121.png"; // Ícono de TikTok
+    img8.alt = "";
+    enlace5.appendChild(img8);
+
+    let texto5 = document.createElement('p');
+    texto5.textContent = "TikTok";
+    caja5.appendChild(enlace5);
+    caja5.appendChild(texto5);
+
+    producto.appendChild(caja5);
     contenedor_footer.appendChild(producto);
 
     // Crear la sección de información
@@ -154,25 +175,36 @@ function footer() {
     informacion_titulo.textContent = "Acerca de nosotros";
     informacion.appendChild(informacion_titulo);
 
-    let enlace5 = document.createElement('a');
-    enlace5.href = "https://www.google.com/maps/place/Colegio+Santa+Catalina+Laboure/data=!4m2!3m1!1s0x0:0x7af091a9cf2a1171?sa=X&ved=1t:2428&ictx=111";
-    enlace5.textContent = "Ubicacion";
-    informacion.appendChild(enlace5);
-
     let enlace6 = document.createElement('a');
-    enlace6.href = "";
-    enlace6.textContent = "Colegio";
+    enlace6.href = "https://www.google.com/maps/place/Colegio+Santa+Catalina+Laboure/data=!4m2!3m1!1s0x0:0x7af091a9cf2a1171?sa=X&ved=1t:2428&ictx=111";
+    enlace6.textContent = "Ubicacion";
     informacion.appendChild(enlace6);
 
     let enlace7 = document.createElement('a');
-    enlace7.href = "https://www.scl.edu.gt";
-    enlace7.textContent = "Sitio web";
+    enlace7.href = "#form_donation";
+    enlace7.textContent = "Ayudanos";
+    enlace7.addEventListener('click', function() {
+        mostrarFormulario(form_donation()); // Mostrar el formulario de donaciones
+    });
     informacion.appendChild(enlace7);
 
     let enlace8 = document.createElement('a');
-    enlace8.href = "";
-    enlace8.textContent = "Presentación";
+    enlace8.href = "https://www.scl.edu.gt";
+    enlace8.textContent = "Sitio web";
     informacion.appendChild(enlace8);
+
+    let enlace9 = document.createElement('a');
+    enlace9.href = "https://www.canva.com/design/DAGhXhIFKoM/peaX6QHYULZdp6oDkOqBfw/view?utm_content=DAGhXhIFKoM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hb633e9ddbd";
+    enlace9.textContent = "Presentación";
+    informacion.appendChild(enlace9);
+
+    let enlace10 = document.createElement('a');
+    enlace10.href = "#form_recomend";
+    enlace10.textContent = "Envia tu Opinión";
+    enlace10.addEventListener('click', function() {
+        mostrarFormulario(form_recomend()); // Mostrar el formulario de recomendaciones
+    });
+    informacion.appendChild(enlace10);
 
     contenedor_footer.appendChild(informacion);
 
@@ -183,5 +215,12 @@ function footer() {
 
     return footer;
 }
+
+function mostrarFormulario(formulario) {
+    let main = document.querySelector("main"); // Selecciona el main
+    main.innerHTML = ''; // Limpia el contenido del main
+    main.appendChild(formulario); // Agrega solo el formulario
+}
+
 
 export { footer };
