@@ -21,7 +21,7 @@ function form_donation() {
     contenedorDiv.className = "contenedor-donation";
 
     let contactHeading = document.createElement('h2');
-    contactHeading.textContent = "Contact Form";
+    contactHeading.textContent = "Contáctanos";
 
     let infoAdicionalDiv = document.createElement('div');
     infoAdicionalDiv.className = "info-adicional";
@@ -85,7 +85,7 @@ function form_donation() {
     nameInput.type = "text";
     nameInput.id = "name";
     nameInput.name = "name";
-    nameInput.placeholder = "Name";
+    nameInput.placeholder = "Nombre";
     nameInput.required = true;
 
     let emailInput = document.createElement('input');
@@ -98,12 +98,12 @@ function form_donation() {
     let messageTextarea = document.createElement('textarea');
     messageTextarea.id = "message";
     messageTextarea.name = "message";
-    messageTextarea.placeholder = "Message";
+    messageTextarea.placeholder = "Mensaje";
     messageTextarea.required = true;
 
     let submitButton = document.createElement('button');
     submitButton.type = "submit";
-    submitButton.textContent = "Send Message";
+    submitButton.textContent = "Enviar";
 
     contactForm.appendChild(nameInput);
     contactForm.appendChild(emailInput);
@@ -181,7 +181,7 @@ function form_recomend() {
     nameInput.type = "text";
     nameInput.id = "nameRecomend"; // Cambiado a nameRecomend
     nameInput.name = "name";
-    nameInput.placeholder = "Name";
+    nameInput.placeholder = "Nombre";
     nameInput.required = true;
 
     // Campo para el correo electrónico
@@ -202,7 +202,7 @@ function form_recomend() {
     // Botón de enviar
     let submitButton = document.createElement('button');
     submitButton.type = "submit";
-    submitButton.textContent = "Send Message";
+    submitButton.textContent = "Enviar";
 
     // Agregar campos al formulario
     contactForm.appendChild(nameInput);

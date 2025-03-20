@@ -404,7 +404,7 @@ function createBloque6() {
         { 
             src: "https://www.globalseafood.org/wp-content/uploads/2018/04/DAVIS-Pic-1-960x566.jpg", 
             user: "Scribd", 
-            date: "Feb 23, 2024", 
+            date: "2020", 
             title: "Sistemas automatizados para la alimentación de tilapias", 
             link: "https://www.scribd.com/document/475891481/propuesta-final-docx?utm_source=chatgpt.com"
         }

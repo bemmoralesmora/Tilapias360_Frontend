@@ -6,17 +6,17 @@ function comprar() {
     const productos = [
         {
             nombre: "Sensor de Turbidez",
-            precio: "250$",
+            precio: "Q220.00",
             descripcion: "Mide la turbidez del agua con precisión, ideal para acuarios y sistemas de filtración.",
             imagen: "",
-            enlace: "#"
+            enlace: "https://www.electronicadiy.com/products/sensor-de-turbidez-de-agua"
         },
         {
             nombre: "Sensor de Temperatura",
-            precio: "150$",
+            precio: "Q35.00",
             descripcion: "Controla la temperatura del agua en tiempo real para mantener un ambiente óptimo.",
             imagen: "https://example.com/temperatura.png",
-            enlace: "#"
+            enlace: "https://tienda.tettsa.gt/producto/sensor-temperatura-ds18b20-sonda-waterproof/"
         },
         {
             nombre: "Sensor de Humedad",
@@ -62,11 +62,11 @@ function comprar() {
             enlace: "#"
         },
         {
-            nombre: "Resistencias 220 Ω, 4.7 kΩ, 10 kΩ",
-            precio: "15$",
+            nombre: "Resistencia de carbón 1K OHM 1/4W",
+            precio: "Q0.75",
             descripcion: "Resistencias de alta calidad para circuitos electrónicos.",
             imagen: "https://example.com/resistencias.png",
-            enlace: "#"
+            enlace: "https://tienda.tettsa.gt/producto/resistencia-r-1k-ohm-1-4w/"
         },
         {
             nombre: "LEDs Rojo, Verde y Amarillo",
@@ -76,11 +76,11 @@ function comprar() {
             enlace: "#"
         },
         {
-            nombre: "Transistor MOSFET (IRF540N o IRFZ44N)",
-            precio: "25$",
+            nombre: "Transistor NPN 2N2222",
+            precio: "Q1.50",
             descripcion: "Transistores MOSFET de alta potencia para aplicaciones electrónicas.",
             imagen: "https://example.com/transistor.png",
-            enlace: "#"
+            enlace: "https://tienda.tettsa.gt/producto/transistor-npn-2n2222/"
         },
         {
             nombre: "Relé de 5V",
@@ -91,10 +91,10 @@ function comprar() {
         },
         {
             nombre: "Diodo 1N4007",
-            precio: "5$",
+            precio: "Q1.00",
             descripcion: "Diodo rectificador de alta calidad para protección de circuitos.",
             imagen: "https://example.com/diodo.png",
-            enlace: "#"
+            enlace: "https://tienda.tettsa.gt/producto/diodo-rectificador-1a-1n4007/"
         },
         {
             nombre: "Condensador de 100 µF",
@@ -115,13 +115,6 @@ function comprar() {
             precio: "50$",
             descripcion: "Sensor para medir el pH en acuarios y sistemas de agua.",
             imagen: "https://example.com/sensorph.png",
-            enlace: "#"
-        },
-        {
-            nombre: "Bomba de Agua",
-            precio: "180$",
-            descripcion: "Bomba eficiente para circulación de agua en acuarios y estanques.",
-            imagen: "https://example.com/bomba.png",
             enlace: "#"
         },
         {
