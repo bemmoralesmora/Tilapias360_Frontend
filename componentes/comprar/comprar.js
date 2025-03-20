@@ -192,7 +192,7 @@ function comprar() {
         let linkCom = document.createElement('a');
         linkCom.className = "link-com";
         linkCom.href = producto.enlace;
-        linkCom.textContent = "Buy here";
+        linkCom.textContent = "Comprar acá";
 
         // Añadir todos los elementos al contenedor principal
         contenedorCom.appendChild(imgCom);

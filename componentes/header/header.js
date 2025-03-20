@@ -20,27 +20,27 @@ function header() {
 
     // Crear botón HOME
     let homeButton = document.createElement('button');
-    homeButton.textContent = "HOME";
+    homeButton.textContent = "INICIO";
     homeButton.className = "home";
 
     // Crear botón SENSORS
     let sensorsButton = document.createElement('button');
-    sensorsButton.textContent = "SENSORS";
+    sensorsButton.textContent = "SENSORES";
     sensorsButton.className = "sensores-a";
 
     // Crear botón ACTIVATORS
     let activatorsButton = document.createElement('button');
-    activatorsButton.textContent = "ACTIVATORS";
+    activatorsButton.textContent = "ACTIVADORES";
     activatorsButton.className = "activadores";
 
     // Crear botón BUY
     let buyButton = document.createElement('button');
-    buyButton.textContent = "BUY";
+    buyButton.textContent = "COMPRAR";
     buyButton.className = "compra";
 
     // Crear botón ABOUT
     let aboutButton = document.createElement('button');
-    aboutButton.textContent = "ABOUT";
+    aboutButton.textContent = "ACERCA DE";
     aboutButton.className = "about";
 
     // Agregar eventos de clic a los botones

@@ -266,7 +266,7 @@ function createBloque5() {
 
     let studentBq5 = document.createElement('div');
     studentBq5.className = "student-bq5";
-    studentBq5.textContent = "Experiencia estudiantes";
+    studentBq5.textContent = "Experiencia estudiantil";
 
     tituloBq5.appendChild(testimonials);
     tituloBq5.appendChild(studentBq5);
@@ -376,28 +376,28 @@ function createBloque6() {
         { 
             src: "https://pharmaq-cdn-e9g8bdeng6hhcsee.z01.azurefd.net/media/2zdbo42d/niletilapia.jpg?width=1200&height=800&v=1d6f61f34f1f6e0", 
             user: "Portal Amelica", 
-            date: "Feb 23, 2024", 
+            date: "Feb, 2019", 
             title: "Cómo optimizar el crecimiento de tilapias con tecnología", 
             link: "https://portal.amelica.org/ameli/journal/129/1292407004/html/?utm_source=chatgpt.com"
         },
         { 
             src: "https://media.istockphoto.com/id/1341577178/es/vector/ilustración-de-granja-flotante.jpg?s=612x612&w=0&k=20&c=evCUWMNgHkdgXFZxwK0i8ttKD0RQ2qrCCludp9TBXr0=", 
             user: "ResearchGate", 
-            date: "Feb 23, 2024", 
+            date: "Sept, 2024", 
             title: "Automatización en acuicultura: Beneficios y desafíos", 
             link: "https://www.researchgate.net/publication/384303292_Sistema_de_Monitoreo_Automatizado_de_Variables_Ambientales_en_un_Cultivo_Acuaponico_de_Tilapia_y_Lechuga?utm_source=chatgpt.com"
         },
         { 
             src: "https://fnb.tech/wp-content/uploads/2025/02/Fish-Monitoring-System.jpg", 
             user: "Digepesca SAG Honduras", 
-            date: "Feb 23, 2024", 
+            date: "2022", 
             title: "Sensores inteligentes para el cuidado de peces", 
             link: "https://www.digepesca.sag.gob.hn/wp-content/uploads/2022/12/Manual-de-Principales-Enfermedades-en-el-Cultivo-de-Tilapia.pdf?utm_source=chatgpt.com"
         },
         { 
             src: "https://www.gob.mx/cms/uploads/article/main_image/8394/Drones_acuacultura.jpg", 
             user: "Universidad de Colima", 
-            date: "Feb 23, 2024", 
+            date: "Mar 18, 2025", 
             title: "Monitoreo avanzado con drones en piscicultura", 
             link: "https://www.ucol.mx/noticias/nota_13759.htm?utm_source=chatgpt.com"
         },
