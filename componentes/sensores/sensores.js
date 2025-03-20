@@ -43,11 +43,11 @@ function sensores() {
     }
 
     // Creación de sensores con IDs
-    let sensor_turbidez = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorTurbidez", "Sensor de turbidez", "proximoRecuentoTurbidez");
-    let sensor_temperatura = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorTemperatura", "Sensor de temperatura", "proximoRecuentoTemperatura");
-    let sensor_ph = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorPH", "Sensor de pH", "proximoRecuentoPH");
-    let sensor_oxigeno = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorOxigeno", "Sensor de oxígeno", "proximoRecuentoOxigeno");
-    let sensor_comida = crearSensor("https://cdn-icons-png.freepik.com/512/11298/11298713.png", "valorComida", "Sensor de nivel de comida", "proximoRecuentoComida");
+    let sensor_turbidez = crearSensor("componentes/sensores/images-s/sensorTur.png", "valorTurbidez", "Sensor de turbidez", "proximoRecuentoTurbidez");
+    let sensor_temperatura = crearSensor("componentes/sensores/images-s/sensorTur.png", "valorTemperatura", "Sensor de temperatura", "proximoRecuentoTemperatura");
+    let sensor_ph = crearSensor("componentes/sensores/images-s/sensorTur.png", "valorPH", "Sensor de pH", "proximoRecuentoPH");
+    let sensor_oxigeno = crearSensor("componentes/sensores/images-s/sensorTur.png", "valorOxigeno", "Sensor de oxígeno", "proximoRecuentoOxigeno");
+    let sensor_comida = crearSensor("componentes/sensores/images-s/sensorTur.png", "valorComida", "Sensor de nivel de comida", "proximoRecuentoComida");
 
     // Agregar sensores al contenedor
     datos_resumen.appendChild(sensor_turbidez);
