@@ -18,21 +18,17 @@ function section() {
     // Establecer la imagen inicial (alfrente) como fondo
     image3D.style.backgroundImage = `url('${faces[0]}')`;
 
-    // Crear las flechas de navegación izquierda y derecha
-    let directions = ['left', 'right'];
-    directions.forEach(dir => {
-        let arrow = document.createElement('button');
-        arrow.className = `arrow arrow-${dir}`;
-        arrow.textContent = dir.toUpperCase();
+// Crear las flechas de navegación izquierda y derecha
+let directions = ['left', 'right'];
+directions.forEach(dir => {
+    let arrow = document.createElement('button');
+    arrow.className = `arrow arrow-${dir}`;
+    arrow.textContent = dir.toUpperCase();
 
-        switch (dir) {
-            case 'left': arrow.style.left = '-50px'; break;
-            case 'right': arrow.style.right = '-50px'; break;
-        }
+    arrow.addEventListener('click', () => navigateCube(dir));
+    image3D.appendChild(arrow);
+});
 
-        arrow.addEventListener('click', () => navigateCube(dir));
-        image3D.appendChild(arrow);
-    });
 
     // Crear los recuadros pequeños para indicadores
     const indicators = ['Temperatura', 'Oxigeno', 'Turbidez', 'PH', 'Humedad'];
