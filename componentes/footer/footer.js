@@ -16,7 +16,7 @@ function footer() {
     div_l1.className = "div-l";
 
     let img1 = document.createElement('img');
-    img1.src = "https://png.pngtree.com/png-clipart/20230429/original/pngtree-fish-vector-illustration-design-png-image_9123513.png";
+    img1.src = "componentes/footer/images-f/logo-t.png";
     img1.alt = "Logo";
     div_l1.appendChild(img1);
 
@@ -35,7 +35,7 @@ function footer() {
     div_l2.className = "div-l";
 
     let img2 = document.createElement('img');
-    img2.src = "https://4h.unl.edu/sites/unl.edu.ianr.extension.4h/files/styles/4_3_720x540/public/media/image/logo-FLL-Challenge.png?itok=uYAXxX2j";
+    img2.src = "componentes/footer/images-f/logo-FLL-Challenge.png";
     img2.alt = "Logo";
     div_l2.appendChild(img2);
 
@@ -43,7 +43,7 @@ function footer() {
     div_l3.className = "div-l";
 
     let img3 = document.createElement('img');
-    img3.src = "https://static.wixstatic.com/media/d1b317_4fe70cb66f9447c3991ad4cb8d7294d3~mv2.png/v1/fit/w_2500,h_1330,al_c/d1b317_4fe70cb66f9447c3991ad4cb8d7294d3~mv2.png";
+    img3.src = "componentes/footer/images-f/logo-cole.png";
     img3.alt = "";
     div_l3.appendChild(img3);
 
@@ -73,7 +73,7 @@ function footer() {
     enlace1.href = "https://github.com/bemmoralesmora/Tilapias360_Frontend";
 
     let img4 = document.createElement('img');
-    img4.src = "https://cdn-icons-png.flaticon.com/512/25/25231.png";
+    img4.src = "componentes/footer/images-f/logo-github.png";
     img4.alt = "";
     enlace1.appendChild(img4);
 
@@ -91,7 +91,7 @@ function footer() {
     enlace2.href = "";
 
     let img5 = document.createElement('img');
-    img5.src = "https://cdn-icons-png.flaticon.com/512/25/25231.png";
+    img5.src = "componentes/footer/images-f/logo-github.png";
     img5.alt = "";
     enlace2.appendChild(img5);
 
@@ -118,7 +118,7 @@ function footer() {
     enlace3.href = "https://www.instagram.com/school_scl/";
 
     let img6 = document.createElement('img');
-    img6.src = "https://1000marcas.net/wp-content/uploads/2019/11/Instagram-Logo.png";
+    img6.src = "componentes/footer/images-f/Instagram-Logo.png";
     img6.alt = "";
     enlace3.appendChild(img6);
 
@@ -136,7 +136,7 @@ function footer() {
     enlace4.href = "https://www.facebook.com/colegioSCL";
 
     let img7 = document.createElement('img');
-    img7.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png";
+    img7.src = "componentes/footer/images-f/Facebook-logo.png";
     img7.alt = "";
     enlace4.appendChild(img7);
 
@@ -155,7 +155,7 @@ function footer() {
     enlace5.href = "https://www.tiktok.com/@scl_school"; 
 
     let img8 = document.createElement('img');
-    img8.src = "https://cdn-icons-png.flaticon.com/512/3046/3046121.png"; // Ícono de TikTok
+    img8.src = "componentes/footer/images-f/logo-tiktok.png"; // Ícono de TikTok
     img8.alt = "";
     enlace5.appendChild(img8);
 
@@ -182,7 +182,7 @@ function footer() {
 
     let enlace7 = document.createElement('a');
     enlace7.href = "#form_donation";
-    enlace7.textContent = "Ayudanos";
+    enlace7.textContent = "Contactanos";
     enlace7.addEventListener('click', function() {
         mostrarFormulario(form_donation()); // Mostrar el formulario de donaciones
     });

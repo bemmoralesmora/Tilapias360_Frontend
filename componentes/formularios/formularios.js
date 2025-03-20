@@ -10,7 +10,7 @@ function form_donation() {
 
     let divImg = document.createElement('div');
     let img = document.createElement('img');
-    img.src = "https://static.wixstatic.com/media/d1b317_9cd309d010cf405ca0a70e15aed80dff~mv2.png/v1/crop/x_293,y_282,w_2144,h_825/fill/w_520,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LogoSCL-13.png";
+    img.src = "componentes/header/images-h/LogoSCL.png";
     img.alt = "Logotipo Colegio Sta. Catalina Laubouré";
     divImg.appendChild(img);
 
@@ -22,7 +22,6 @@ function form_donation() {
 
     let contactHeading = document.createElement('h2');
     contactHeading.textContent = "Contáctanos";
-
     let infoAdicionalDiv = document.createElement('div');
     infoAdicionalDiv.className = "info-adicional";
 
@@ -33,7 +32,7 @@ function form_donation() {
     ubicacionPara.textContent = "Cdad. de Guatemala 4-78 zona 1 Mixco, km 16.5 carretera Interamericana";
 
     let correoHeading = document.createElement('h3');
-    correoHeading.textContent = "correo";
+    correoHeading.textContent = "No. Telefono";
 
     let correoPara = document.createElement('p');
     correoPara.textContent = "PBX: 2314-0909 Whatsapp: 3215-0777";
@@ -49,21 +48,21 @@ function form_donation() {
     let socialLink1 = document.createElement('a');
     socialLink1.href = "";
     let socialImg1 = document.createElement('img');
-    socialImg1.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png";
+    socialImg1.src = "componentes/footer/images-f/Facebook-logo.png";
     socialImg1.alt = "";
     socialLink1.appendChild(socialImg1);
 
     let socialLink2 = document.createElement('a');
     socialLink2.href = "";
     let socialImg2 = document.createElement('img');
-    socialImg2.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/640px-Instagram_icon.png";
+    socialImg2.src = "componentes/footer/images-f/Instagram-Logo.png";
     socialImg2.alt = "";
     socialLink2.appendChild(socialImg2);
 
     let socialLink3 = document.createElement('a');
     socialLink3.href = "";
     let socialImg3 = document.createElement('img');
-    socialImg3.src = "https://images.icon-icons.com/3261/PNG/512/github_logo_icon_206752.png";
+    socialImg3.src = "componentes/footer/images-f/logo-tiktok.png";
     socialImg3.alt = "";
     socialLink3.appendChild(socialImg3);
 
@@ -159,7 +158,7 @@ function form_recomend() {
 
     let divImg = document.createElement('div');
     let img = document.createElement('img');
-    img.src = "https://static.wixstatic.com/media/d1b317_9cd309d010cf405ca0a70e15aed80dff~mv2.png/v1/crop/x_293,y_282,w_2144,h_825/fill/w_520,h_200,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LogoSCL-13.png";
+    img.src = "componentes/header/images-h/LogoSCL.png";
     img.alt = "Logotipo Colegio Sta. Catalina Laubouré";
     divImg.appendChild(img);
 

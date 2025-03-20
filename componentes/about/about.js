@@ -52,7 +52,7 @@ function createBloque3() {
     imgText.className = "img-text";
 
     let img = document.createElement('img');
-    img.src = "https://upload.wikimedia.org/wikipedia/commons/e/e8/Oreochromis_mossambicus.jpg"; // Imagen de tilapia
+    img.src = "componentes/about/images-a/tilapia.png"; // Imagen de tilapia
     img.alt = "";
 
     let lineas = document.createElement('div');
@@ -105,10 +105,10 @@ function createBloque3() {
     numeros.className = "numeros";
 
     let numerosData = [
-        { src: "https://empresasalacarta.cl/wp-content/uploads/2023/08/Sensores.webp", text: "Sensores utilizados" },
-        { src: "https://novatronicec.com/wp-content/uploads/2024/06/MB102-Fuente-para-protoboard-5V-y-3.3V-MB102.png", text: "Motores controlados" },
-        { src: "https://www.mouser.com.gt/images/marketingid/2022/img/127818871.png?v=032924.0127", text: "Datos monitoreados" },
-        { src: "https://shopcdnpro.grainajz.com/category/81972/250/b34b05e6a7bf34562dd8c69e0322a44a/image.png", text: "Tilapias cuidadas" }
+        { src: "componentes/about/images-a/Sensores.png", text: "Sensores utilizados" },
+        { src: "componentes/about/images-a/Fuente.png", text: "Motores controlados" },
+        { src: "componentes/about/images-a/raspberry.png", text: "Datos monitoreados" },
+        { src: "componentes/about/images-a/granja.png", text: "Tilapias cuidadas" }
     ];
 
     numerosData.forEach(data => {
@@ -184,9 +184,9 @@ function createBloque4() {
     imagenBq4.className = "imagen-bq4";
 
     let imagesData = [
-        { src: "https://www.mouser.com.gt/images/marketingid/2018/img/153364623.png?v=070223.0303", title: "Sensor de pH", price: "$350", rating: "3.9" },
-        { src: "https://i0.wp.com/j-rpm.com/wp-content/uploads/2018/05/DHT11-300x289.png?resize=660%2C636", title: "Sensor de Temperatura", price: "$350", rating: "3.7" },
-        { src: "https://www.walchem.com/wp-content/uploads/pyxisdissolvedoxygen-1-300x300.png", title: "Sensor de Oxígeno", price: "$350", rating: "3.8" },
+        { src: "componentes/about/images-a/sensorPH.png", title: "Sensor de pH", price: "$350", rating: "3.9" },
+        { src: "componentes/about/images-a/sensorTemp.png", title: "Sensor de Temperatura", price: "$350", rating: "3.7" },
+        { src: "componentes/about/images-a/sensorOxig.png", title: "Sensor de Oxígeno", price: "$350", rating: "3.8" },
     ];
 
     imagesData.forEach(data => {
@@ -276,21 +276,21 @@ function createBloque5() {
 
     let estudiantesData = [
         { 
-            src: "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png", 
+            src: "componentes/about/images-a/user.png", 
             name: "Gabriel López", 
             role: "Estudiante de Computación", 
             rating: "4.7", 
             text: "Me encargué de trabajar en el material designado al prototipo, asegurándome de que cada componente fuera intuitivo y fácil de usar, lo que permitió un diseño efectivo para el proyecto." 
         }, 
         { 
-            src: "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png", 
+            src: "componentes/about/images-a/user.png", 
             name: "José María", 
             role: "Estudiante de Computación", 
             rating: "4.9", 
             text: "Mi responsabilidad fue desarrollar el circuito y el backend del proyecto. Gracias a la implementación de una arquitectura robusta, logramos una plataforma eficiente y funcional." 
         }, 
         { 
-            src: "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png", 
+            src: "componentes/about/images-a/user.png", 
             name: "Brian Morales", 
             role: "Estudiante de Computación", 
             rating: "5.0", 
@@ -374,35 +374,35 @@ function createBloque6() {
 
     let blogData = [
         { 
-            src: "https://pharmaq-cdn-e9g8bdeng6hhcsee.z01.azurefd.net/media/2zdbo42d/niletilapia.jpg?width=1200&height=800&v=1d6f61f34f1f6e0", 
+            src: "componentes/about/images-a/art-img1.png", 
             user: "Portal Amelica", 
             date: "Feb, 2019", 
             title: "Cómo optimizar el crecimiento de tilapias con tecnología", 
             link: "https://portal.amelica.org/ameli/journal/129/1292407004/html/?utm_source=chatgpt.com"
         },
         { 
-            src: "https://media.istockphoto.com/id/1341577178/es/vector/ilustración-de-granja-flotante.jpg?s=612x612&w=0&k=20&c=evCUWMNgHkdgXFZxwK0i8ttKD0RQ2qrCCludp9TBXr0=", 
+            src: "componentes/about/images-a/art-img2.png", 
             user: "ResearchGate", 
             date: "Sept, 2024", 
             title: "Automatización en acuicultura: Beneficios y desafíos", 
             link: "https://www.researchgate.net/publication/384303292_Sistema_de_Monitoreo_Automatizado_de_Variables_Ambientales_en_un_Cultivo_Acuaponico_de_Tilapia_y_Lechuga?utm_source=chatgpt.com"
         },
         { 
-            src: "https://fnb.tech/wp-content/uploads/2025/02/Fish-Monitoring-System.jpg", 
+            src: "componentes/about/images-a/art-img3.png", 
             user: "Digepesca SAG Honduras", 
             date: "2022", 
             title: "Sensores inteligentes para el cuidado de peces", 
             link: "https://www.digepesca.sag.gob.hn/wp-content/uploads/2022/12/Manual-de-Principales-Enfermedades-en-el-Cultivo-de-Tilapia.pdf?utm_source=chatgpt.com"
         },
         { 
-            src: "https://www.gob.mx/cms/uploads/article/main_image/8394/Drones_acuacultura.jpg", 
+            src: "componentes/about/images-a/art-img4.png", 
             user: "Universidad de Colima", 
             date: "Mar 18, 2025", 
             title: "Monitoreo avanzado con drones en piscicultura", 
             link: "https://www.ucol.mx/noticias/nota_13759.htm?utm_source=chatgpt.com"
         },
         { 
-            src: "https://www.globalseafood.org/wp-content/uploads/2018/04/DAVIS-Pic-1-960x566.jpg", 
+            src: "componentes/about/images-a/art-img5.png", 
             user: "Scribd", 
             date: "2020", 
             title: "Sistemas automatizados para la alimentación de tilapias", 
