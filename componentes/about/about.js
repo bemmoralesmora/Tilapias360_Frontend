@@ -184,9 +184,9 @@ function createBloque4() {
     imagenBq4.className = "imagen-bq4";
 
     let imagesData = [
-        { src: "componentes/about/images-a/sensorPH.png", title: "Sensor de pH", price: "$350", rating: "3.9" },
-        { src: "componentes/about/images-a/sensorTemp.png", title: "Sensor de Temperatura", price: "$350", rating: "3.7" },
-        { src: "componentes/about/images-a/sensorOxig.png", title: "Sensor de Oxígeno", price: "$350", rating: "3.8" },
+        { src: "componentes/about/images-a/sensorPH.png", title: "Sensor de pH", price: "Q 290.00", rating: "3.9" },
+        { src: "componentes/about/images-a/sensorTemp.png", title: "Sensor de Temperatura", price: "Q 35.00", rating: "3.7" },
+        { src: "componentes/about/images-a/sensorOxig.png", title: "Sensor de Oxígeno", price: "Q 340.00", rating: "3.8" },
     ];
 
     imagesData.forEach(data => {

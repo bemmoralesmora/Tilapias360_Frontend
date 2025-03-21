@@ -46,21 +46,21 @@ function form_donation() {
     redesSocialesDiv.className = "redes_sociales-f";
 
     let socialLink1 = document.createElement('a');
-    socialLink1.href = "";
+    socialLink1.href = "https://www.facebook.com/colegioSCL";
     let socialImg1 = document.createElement('img');
     socialImg1.src = "componentes/footer/images-f/Facebook-logo.png";
     socialImg1.alt = "";
     socialLink1.appendChild(socialImg1);
 
     let socialLink2 = document.createElement('a');
-    socialLink2.href = "";
+    socialLink2.href = "https://www.instagram.com/school_scl/";
     let socialImg2 = document.createElement('img');
     socialImg2.src = "componentes/footer/images-f/Instagram-Logo.png";
     socialImg2.alt = "";
     socialLink2.appendChild(socialImg2);
 
     let socialLink3 = document.createElement('a');
-    socialLink3.href = "";
+    socialLink3.href = "https://www.tiktok.com/@scl_school";
     let socialImg3 = document.createElement('img');
     socialImg3.src = "componentes/footer/images-f/logo-tiktok.png";
     socialImg3.alt = "";
@@ -188,7 +188,7 @@ function form_recomend() {
     emailInput.type = "email";
     emailInput.id = "emailRecomend"; // Cambiado a emailRecomend
     emailInput.name = "email";
-    emailInput.placeholder = "Your  Email";
+    emailInput.placeholder = "Email";
     emailInput.required = true;
 
     // Campo para el mensaje
