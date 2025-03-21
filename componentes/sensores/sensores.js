@@ -11,6 +11,7 @@ function sensores() {
     function crearSensor(imagenSrc, idValor, nombre, idRecuento) {
         let sensor = document.createElement('div');
         sensor.className = "sensor";
+        sensor.style.position = "relative"; // Necesario para posicionar el ícono de alerta
 
         // Contenedor de la imagen
         let divImg = document.createElement('div');
@@ -33,11 +34,21 @@ function sensores() {
         pRecuento.id = idRecuento;
         pRecuento.textContent = "Próximo recuento: 10min";
 
+        // Ícono de alerta (inicialmente oculto)
+        let iconoAlerta = document.createElement('span');
+        iconoAlerta.textContent = "⚠️"; // Emoji de advertencia
+        iconoAlerta.style.position = "absolute"; // Posicionamiento absoluto dentro del sensor
+        iconoAlerta.style.top = "5px"; // Distancia desde la parte superior
+        iconoAlerta.style.right = "5px"; // Distancia desde la derecha
+        iconoAlerta.style.display = "none"; // Oculto por defecto
+        iconoAlerta.id = `alerta-${idValor}`; // ID único para el ícono de alerta
+
         // Agregar elementos al sensor
         sensor.appendChild(divImg);
         sensor.appendChild(h1);
         sensor.appendChild(pNombre);
         sensor.appendChild(pRecuento);
+        sensor.appendChild(iconoAlerta); // Agregar el ícono de alerta al sensor
 
         return sensor;
     }
@@ -56,16 +67,79 @@ function sensores() {
     datos_resumen.appendChild(sensor_oxigeno);
     datos_resumen.appendChild(sensor_comida);
 
+    // Función para mostrar alertas con alert()
+    function mostrarAlerta(mensaje, tipo, idElemento) {
+        // Mostrar alerta simple con alert()
+        alert(`${tipo.toUpperCase()}: ${mensaje}`);
+
+        // Mostrar ícono de alerta en el sensor correspondiente
+        const iconoAlerta = document.querySelector(`#alerta-${idElemento}`);
+        if (iconoAlerta) {
+            iconoAlerta.style.display = "block"; // Mostrar el ícono
+        }
+    }
+
     // Función para hacer fetch y actualizar el DOM con los valores de los sensores
     function actualizarSensor(url, idElemento, nombreSensor) {
         fetch(url)
             .then(response => response.json())  // Suponiendo que la respuesta es un JSON
             .then(data => {
                 const valorSensor = document.getElementById(idElemento);
-                console.log(valorSensor);
+                const valor = data[nombreSensor.toLowerCase()];
                 
                 if (valorSensor) {
-                    valorSensor.textContent = `${nombreSensor}: ${data[nombreSensor.toLowerCase()]} ${nombreSensor === "Temperatura" ? "°C" : ""}`;
+                    valorSensor.textContent = `${nombreSensor}: ${valor} ${nombreSensor === "Temperatura" ? "°C" : ""}`;
+                }
+
+                // Verificar condiciones y mostrar alertas
+                switch (nombreSensor) {
+                    case "Temperatura":
+                        if (valor < 10 || valor > 32) {
+                            mostrarAlerta(`Temperatura mortal: ${valor}°C`, 'mortal', idElemento);
+                        } else if (valor > 30 && valor <= 32) {
+                            mostrarAlerta(`Temperatura de estrés: ${valor}°C`, 'estres', idElemento);
+                        } else {
+                            // Ocultar ícono de alerta si el valor es óptimo
+                            const iconoAlerta = document.querySelector(`#alerta-${idElemento}`);
+                            if (iconoAlerta) {
+                                iconoAlerta.style.display = "none";
+                            }
+                        }
+                        break;
+                    case "Turbidez":
+                        if (valor > 100) {
+                            mostrarAlerta(`Turbidez alta: ${valor} ppm`, 'estres', idElemento);
+                        } else {
+                            const iconoAlerta = document.querySelector(`#alerta-${idElemento}`);
+                            if (iconoAlerta) {
+                                iconoAlerta.style.display = "none";
+                            }
+                        }
+                        break;
+                    case "pH":
+                        if (valor < 5) {
+                            mostrarAlerta(`pH mortal: ${valor}`, 'mortal', idElemento);
+                        } else if (valor < 6.5 || valor > 9) {
+                            mostrarAlerta(`pH fuera de rango óptimo: ${valor}`, 'estres', idElemento);
+                        } else {
+                            const iconoAlerta = document.querySelector(`#alerta-${idElemento}`);
+                            if (iconoAlerta) {
+                                iconoAlerta.style.display = "none";
+                            }
+                        }
+                        break;
+                    case "Oxigeno":
+                        if (valor < 1) {
+                            mostrarAlerta(`Oxígeno mortal: ${valor} mg/L`, 'mortal', idElemento);
+                        } else if (valor >= 1 && valor < 3) {
+                            mostrarAlerta(`Oxígeno de estrés: ${valor} mg/L`, 'estres', idElemento);
+                        } else {
+                            const iconoAlerta = document.querySelector(`#alerta-${idElemento}`);
+                            if (iconoAlerta) {
+                                iconoAlerta.style.display = "none";
+                            }
+                        }
+                        break;
                 }
             })
             .catch(error => {

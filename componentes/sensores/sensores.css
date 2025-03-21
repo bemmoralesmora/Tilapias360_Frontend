@@ -82,6 +82,7 @@
     margin: 0; /* Elimina el margen por defecto */
 }
 
+
 /* Estilos responsivos */
 @media (max-width: 1024px) {
     .datos {
