@@ -88,7 +88,7 @@ function footer() {
     caja2.className = "caja";
 
     let enlace2 = document.createElement('a');
-    enlace2.href = "";
+    enlace2.href = "https://github.com/fogel98n/rasberry-pi-pico-w";
 
     let img5 = document.createElement('img');
     img5.src = "componentes/footer/images-f/logo-github.png";
