@@ -21,14 +21,14 @@ function activadores() {
 
     let progreso1 = document.createElement('div');
     progreso1.className = "progreso";
-    progreso1.textContent = "Funcionando";
+    progreso1.textContent = "Inactivo"; // Cambiado a "Inactivo"
 
     let button1 = document.createElement('button');
     button1.className = "act-desc";
     button1.textContent = "activar";
 
     // Agregar el evento de clic al botón
-    button1.addEventListener('click', () => activar_desactivar(button1));
+    button1.addEventListener('click', () => activar_desactivar(button1, progreso1));
 
     bomba1.appendChild(imgAct1);
     bomba1.appendChild(h1Bomba1);
@@ -54,14 +54,14 @@ function activadores() {
 
     let progreso2 = document.createElement('div');
     progreso2.className = "progreso";
-    progreso2.textContent = "Funcionando";
+    progreso2.textContent = "Inactivo"; // Cambiado a "Inactivo"
 
     let button2 = document.createElement('button');
     button2.className = "act-desc";
     button2.textContent = "activar";
 
     // Agregar el evento de clic al botón
-    button2.addEventListener('click', () => activar_desactivar(button2));
+    button2.addEventListener('click', () => activar_desactivar(button2, progreso2));
 
     bomba2.appendChild(imgAct2);
     bomba2.appendChild(h1Bomba2);
@@ -87,14 +87,14 @@ function activadores() {
 
     let progreso3 = document.createElement('div');
     progreso3.className = "progreso";
-    progreso3.textContent = "Funcionando";
+    progreso3.textContent = "Inactivo"; // Cambiado a "Inactivo"
 
     let button3 = document.createElement('button');
     button3.className = "act-desc";
     button3.textContent = "activar";
 
     // Agregar el evento de clic al botón
-    button3.addEventListener('click', () => activar_desactivar(button3));
+    button3.addEventListener('click', () => activar_desactivar(button3, progreso3));
 
     oxigenador.appendChild(imgAct3);
     oxigenador.appendChild(h1Oxigenador);
