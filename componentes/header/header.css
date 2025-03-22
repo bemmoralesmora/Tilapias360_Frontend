@@ -8,17 +8,20 @@
 }
 
 .menu {
-    width: 50rem;
     display: flex;
-    justify-content: space-around ;
+    justify-content: space-around;
+    gap: 1rem;
+
     align-items: center;
 }
 
 .menu button {
     all: unset;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 18px;
     color: var(--azul-profundo);
     cursor: pointer;
@@ -32,57 +35,25 @@
 /* Media Queries para móviles */
 @media (max-width: 767px) {
     .header {
-        height: auto;
+            height: auto;
+            flex-direction: column;
+        }
+    .header {
         flex-direction: column;
         padding: 1rem 0;
         gap: 1rem;
     }
 
-    .logotipo {
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .logotipo div {
-        width: 8rem;
-        height: 8rem;
-    }
-
-    .logotipo h1 {
-        font-size: 16px;
+    .header img {
+        width: 20rem;
+        margin: auto;
     }
 
     .menu {
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
 
-    .menu button {
-        width: 100%;
-        height: 3rem;
-    }
-}
-
-/* Media Queries para tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .header {
-        height: 10rem;
-    }
-
-    .logotipo {
-        width: 22rem;
-        height: 6rem;
-    }
-
-    .logotipo h1 {
-        font-size: 16px;
-    }
-
-    .menu {
-        width: 40rem;
+        align-items: center;
     }
 }
