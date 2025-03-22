@@ -79,18 +79,32 @@ function sensores() {
         }
     }
 
-    // Función para hacer fetch y actualizar el DOM con los valores de los sensores
     function actualizarSensor(url, idElemento, nombreSensor) {
         fetch(url)
             .then(response => response.json())  // Suponiendo que la respuesta es un JSON
             .then(data => {
                 const valorSensor = document.getElementById(idElemento);
-                const valor = data[nombreSensor.toLowerCase()];
+                const clave = nombreSensor.toLowerCase(); // Convertimos el nombre del sensor a minúsculas
+                const valor = data[clave]; // Accedemos al valor usando la clave correcta
                 
                 if (valorSensor) {
-                    valorSensor.textContent = `${nombreSensor}: ${valor} ${nombreSensor === "Temperatura" ? "°C" : ""}`;
+                    let unidad = ""; // Inicializamos la unidad como una cadena vacía
+    
+                    // Asignamos la unidad correspondiente según el tipo de sensor
+                    if (nombreSensor === "Temperatura") {
+                        unidad = "°C";
+                    } else if (nombreSensor === "Turbidez") {
+                        unidad = "ppm";
+                    } else if (nombreSensor === "Oxigeno") {
+                        unidad = "mg/L";
+                    } else if (nombreSensor === "Humedad") {
+                        unidad = "%"; // Asumiendo que la humedad se mide en porcentaje
+                    }
+    
+                    // Actualizamos el contenido del elemento con la unidad correcta
+                    valorSensor.textContent = `${nombreSensor}: ${valor} ${unidad}`;
                 }
-
+    
                 // Verificar condiciones y mostrar alertas
                 switch (nombreSensor) {
                     case "Temperatura":
@@ -140,6 +154,17 @@ function sensores() {
                             }
                         }
                         break;
+                    case "Humedad":
+                        // Aquí puedes agregar condiciones para mostrar alertas relacionadas con la humedad
+                        if (valor < 20 || valor > 80) {
+                            mostrarAlerta(`Humedad fuera de rango: ${valor}%`, 'estres', idElemento);
+                        } else {
+                            const iconoAlerta = document.querySelector(`#alerta-${idElemento}`);
+                            if (iconoAlerta) {
+                                iconoAlerta.style.display = "none";
+                            }
+                        }
+                        break;
                 }
             })
             .catch(error => {
@@ -150,11 +175,11 @@ function sensores() {
                 }
             });
     }
-
+    
     // Actualizar valores de cada sensor
     actualizarSensor('https://tilapias360.duckdns.org:3000/temperatura', 'valorTemperatura', 'Temperatura');
     actualizarSensor('https://tilapias360.duckdns.org:3000/ph', 'valorPH', 'pH');
-    actualizarSensor('https://tilapias360.duckdns.org:3000/humedad', 'valorComida', 'Nivel de comida');
+    actualizarSensor('https://tilapias360.duckdns.org:3000/humedad', 'valorComida', 'Humedad');
     actualizarSensor('https://tilapias360.duckdns.org:3000/oxigeno', 'valorOxigeno', 'Oxigeno');
     actualizarSensor('https://tilapias360.duckdns.org:3000/turbidez', 'valorTurbidez', 'Turbidez');
 
